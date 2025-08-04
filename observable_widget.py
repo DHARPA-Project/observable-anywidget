@@ -1,6 +1,7 @@
 import anywidget
 import traitlets
 import pathlib
+import re
 
 class ObservableWidget(anywidget.AnyWidget):
     notebook_path = traitlets.Unicode().tag(sync=True)
@@ -21,6 +22,7 @@ class ObservableWidget(anywidget.AnyWidget):
         try:
             base_path = pathlib.Path(notebook_path)
             
+            # Still using hardcoded filenames - no functional change
             with open(base_path / "runtime.js", 'r') as f:
                 self.runtime_js = f.read()
             with open(base_path / "845501cdfbbf1a83@464.js", 'r') as f:
@@ -32,6 +34,43 @@ class ObservableWidget(anywidget.AnyWidget):
             
         except Exception as e:
             print(f"Error loading files: {e}")
+    
+    def _find_main_notebook_file(self, base_path):
+        """Find the main notebook JavaScript file using index.js"""
+        index_file = base_path / "index.js"
+        
+        if not index_file.exists():
+            raise FileNotFoundError(f"index.js not found in {base_path}")
+        
+        # Read index.js to find the main export
+        with open(index_file, 'r') as f:
+            content = f.read()
+        
+        # Parse export statement like: export {default} from "./845501cdfbbf1a83@464.js";
+        export_pattern = r'export\s+\{[^}]*default[^}]*\}\s+from\s+[\'"]\.\/([^\'\"]+)[\'"]'
+        match = re.search(export_pattern, content)
+        
+        if match:
+            main_filename = match.group(1)
+            main_file = base_path / main_filename
+            
+            if main_file.exists():
+                return main_file
+            else:
+                raise FileNotFoundError(f"Main file {main_filename} referenced in index.js not found")
+        
+        # Alternative pattern: export {default} from "./file.js"
+        simple_export_pattern = r'export\s+\{[^}]*\}\s+from\s+[\'"]\.\/([^\'\"]+)[\'"]'
+        match = re.search(simple_export_pattern, content)
+        
+        if match:
+            main_filename = match.group(1)
+            main_file = base_path / main_filename
+            
+            if main_file.exists():
+                return main_file
+        
+        raise FileNotFoundError(f"Could not parse main file from index.js in {base_path}")
     
     _esm = r"""
     function render(view) {
