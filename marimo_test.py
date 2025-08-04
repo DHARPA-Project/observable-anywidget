@@ -7,7 +7,7 @@ app = marimo.App(width="medium")
 @app.cell
 def _():
     import marimo as mo
-    from test_widget import ObservableWidget
+    from observable_widget import ObservableWidget
     return ObservableWidget, mo
 
 
