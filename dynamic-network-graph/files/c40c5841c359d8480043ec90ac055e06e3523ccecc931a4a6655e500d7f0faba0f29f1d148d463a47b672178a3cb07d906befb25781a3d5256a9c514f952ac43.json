@@ -1,0 +1,2712 @@
+{
+    "directed": false,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+        {
+            "bipartite": 1,
+            "title": "Bündnis von Gmunden (verlesen: *Brunndenau)",
+            "dates": "1514 VIII 4",
+            "Treaty_Id": 1,
+            "node_type": "treaty",
+            "start_date": 1514,
+            "end_date": 1785,
+            "year": 1514,
+            "id": "T1"
+        },
+        {
+            "bipartite": 0,
+            "sides": "Kaiser",
+            "Side_Id": 1,
+            "node_type": "country",
+            "start_date": 1514,
+            "end_date": 1785,
+            "id": "C1"
+        },
+        {
+            "bipartite": 0,
+            "sides": "Russland",
+            "Side_Id": 2,
+            "node_type": "country",
+            "start_date": 1514,
+            "end_date": 1785,
+            "id": "C2"
+        },
+        {
+            "bipartite": 1,
+            "title": "Waffenstillstand von Moskau",
+            "dates": "1522 XII 25_1523 I 4",
+            "Treaty_Id": 2,
+            "node_type": "treaty",
+            "start_date": 1522,
+            "end_date": 1785,
+            "year": 1522,
+            "id": "T2"
+        },
+        {
+            "bipartite": 0,
+            "sides": "Polen",
+            "Side_Id": 3,
+            "node_type": "country",
+            "start_date": 1522,
+            "end_date": 1785,
+            "id": "C3"
+        },
+        {
+            "bipartite": 1,
+            "title": "Präliminarvertrag von Krakau",
+            "dates": "1523 II 22",
+            "Treaty_Id": 3,
+            "node_type": "treaty",
+            "start_date": 1523,
+            "end_date": 1785,
+            "year": 1523,
+            "id": "T3"
+        },
+        {
+            "bipartite": 1,
+            "title": "Waffenstillstand von Nowgorod",
+            "dates": "1524 IV 3",
+            "Treaty_Id": 4,
+            "node_type": "treaty",
+            "start_date": 1524,
+            "end_date": 1785,
+            "year": 1524,
+            "id": "T4"
+        },
+        {
+            "bipartite": 0,
+            "sides": "Schweden",
+            "Side_Id": 4,
+            "node_type": "country",
+            "start_date": 1524,
+            "end_date": 1785,
+            "id": "C4"
+        },
+        {
+            "bipartite": 1,
+            "title": "Waffenstillstand von Nowgorod",
+            "dates": "1537 III 25_IV 4",
+            "Treaty_Id": 5,
+            "node_type": "treaty",
+            "start_date": 1537,
+            "end_date": 1785,
+            "year": 1537,
+            "id": "T5"
+        },
+        {
+            "bipartite": 1,
+            "title": "Waffenstillstands-, Grenz- und Handelsvertrag von Nowgorod",
+            "dates": "1561 VIII",
+            "Treaty_Id": 6,
+            "node_type": "treaty",
+            "start_date": 1561,
+            "end_date": 1785,
+            "year": 1561,
+            "id": "T6"
+        },
+        {
+            "bipartite": 1,
+            "title": "Waffenstillstand von Dorpat",
+            "dates": "1564 IX ",
+            "Treaty_Id": 7,
+            "node_type": "treaty",
+            "start_date": 1564,
+            "end_date": 1785,
+            "year": 1564,
+            "id": "T7"
+        },
+        {
+            "bipartite": 1,
+            "title": "Waffenstillstand von Narva",
+            "dates": "1583 VIII 10",
+            "Treaty_Id": 8,
+            "node_type": "treaty",
+            "start_date": 1583,
+            "end_date": 1785,
+            "year": 1583,
+            "id": "T8"
+        },
+        {
+            "bipartite": 1,
+            "title": "Ewiger Friede von Tjawzin",
+            "dates": "1595 V 18",
+            "Treaty_Id": 9,
+            "node_type": "treaty",
+            "start_date": 1595,
+            "end_date": 1785,
+            "year": 1595,
+            "id": "T9"
+        },
+        {
+            "bipartite": 1,
+            "title": "Friedensvertrag von Teusina",
+            "dates": "1595 V 18",
+            "Treaty_Id": 10,
+            "node_type": "treaty",
+            "start_date": 1595,
+            "end_date": 1785,
+            "year": 1595,
+            "id": "T10"
+        },
+        {
+            "bipartite": 1,
+            "title": "Waffenstillstand von Moskau",
+            "dates": "1608 VII 20_30",
+            "Treaty_Id": 11,
+            "node_type": "treaty",
+            "start_date": 1608,
+            "end_date": 1785,
+            "year": 1608,
+            "id": "T11"
+        },
+        {
+            "bipartite": 1,
+            "title": "Bündnisvertrag von Wiborg",
+            "dates": "1609 II 28",
+            "Treaty_Id": 12,
+            "node_type": "treaty",
+            "start_date": 1609,
+            "end_date": 1785,
+            "year": 1609,
+            "id": "T12"
+        },
+        {
+            "bipartite": 1,
+            "title": "Waffenstillstand von Dederino",
+            "dates": "1616 II 22_III 4",
+            "Treaty_Id": 13,
+            "node_type": "treaty",
+            "start_date": 1616,
+            "end_date": 1785,
+            "year": 1616,
+            "id": "T13"
+        },
+        {
+            "bipartite": 1,
+            "title": "Friedensvertrag von Stolbovo (Beta-Version)",
+            "dates": "1617 II 27_III 9",
+            "Treaty_Id": 14,
+            "node_type": "treaty",
+            "start_date": 1617,
+            "end_date": 1785,
+            "year": 1617,
+            "id": "T14"
+        },
+        {
+            "bipartite": 1,
+            "title": "Freundschaftsvertrag von Livny",
+            "dates": "1623 VI 28_VII 8",
+            "Treaty_Id": 15,
+            "node_type": "treaty",
+            "start_date": 1623,
+            "end_date": 1785,
+            "year": 1623,
+            "id": "T15"
+        },
+        {
+            "bipartite": 0,
+            "sides": "Siebenbürgen",
+            "Side_Id": 5,
+            "node_type": "country",
+            "start_date": 1623,
+            "end_date": 1785,
+            "id": "C5"
+        },
+        {
+            "bipartite": 1,
+            "title": "Friedensvertrag von Moskau",
+            "dates": "1627 XII 18_28",
+            "Treaty_Id": 16,
+            "node_type": "treaty",
+            "start_date": 1627,
+            "end_date": 1785,
+            "year": 1627,
+            "id": "T16"
+        },
+        {
+            "bipartite": 1,
+            "title": "Freundschaftsvertrag von Walujki",
+            "dates": "1629 IX ",
+            "Treaty_Id": 17,
+            "node_type": "treaty",
+            "start_date": 1629,
+            "end_date": 1785,
+            "year": 1629,
+            "id": "T17"
+        },
+        {
+            "bipartite": 1,
+            "title": "Friedensvertrag von Poljanovka",
+            "dates": "1634 V 17_27",
+            "Treaty_Id": 18,
+            "node_type": "treaty",
+            "start_date": 1634,
+            "end_date": 1785,
+            "year": 1634,
+            "id": "T18"
+        },
+        {
+            "bipartite": 1,
+            "title": "Friedensvertrag (Ewiger Friede) von Poljanovka (Polanów)",
+            "dates": "1634 VI 14",
+            "Treaty_Id": 19,
+            "node_type": "treaty",
+            "start_date": 1634,
+            "end_date": 1785,
+            "year": 1634,
+            "id": "T19"
+        },
+        {
+            "bipartite": 1,
+            "title": "Friedensvertrag von Ilančik",
+            "dates": "1638 IX",
+            "Treaty_Id": 20,
+            "node_type": "treaty",
+            "start_date": 1638,
+            "end_date": 1785,
+            "year": 1638,
+            "id": "T20"
+        },
+        {
+            "bipartite": 1,
+            "title": "Bestätigung des Friedens von Stolbovo",
+            "dates": "1646 III 2",
+            "Treaty_Id": 21,
+            "node_type": "treaty",
+            "start_date": 1646,
+            "end_date": 1785,
+            "year": 1646,
+            "id": "T21"
+        },
+        {
+            "bipartite": 1,
+            "title": "Nichteinlass und Vereinbarung von Stockholm",
+            "dates": "1649 X 19",
+            "Treaty_Id": 22,
+            "node_type": "treaty",
+            "start_date": 1649,
+            "end_date": 1785,
+            "year": 1649,
+            "id": "T22"
+        },
+        {
+            "bipartite": 1,
+            "title": "Präliminarvertrag von Moskau",
+            "dates": "1658 V 25",
+            "Treaty_Id": 23,
+            "node_type": "treaty",
+            "start_date": 1658,
+            "end_date": 1785,
+            "year": 1658,
+            "id": "T23"
+        },
+        {
+            "bipartite": 1,
+            "title": "Stillstandsvertrag von Valiesar",
+            "dates": "1658 XII 20",
+            "Treaty_Id": 24,
+            "node_type": "treaty",
+            "start_date": 1658,
+            "end_date": 1785,
+            "year": 1658,
+            "id": "T24"
+        },
+        {
+            "bipartite": 1,
+            "title": "Friedensvertrag von Kardis",
+            "dates": "1661 VI 21",
+            "Treaty_Id": 25,
+            "node_type": "treaty",
+            "start_date": 1661,
+            "end_date": 1785,
+            "year": 1661,
+            "id": "T25"
+        },
+        {
+            "bipartite": 1,
+            "title": "Friedensvertrag von Andrusovo",
+            "dates": "1667 I 20_30",
+            "Treaty_Id": 26,
+            "node_type": "treaty",
+            "start_date": 1667,
+            "end_date": 1785,
+            "year": 1667,
+            "id": "T26"
+        },
+        {
+            "bipartite": 1,
+            "title": "Bestätigung des Vertrags von Andrusovo (1667 I 20), Radzin",
+            "dates": "1670 III 7_17 ",
+            "Treaty_Id": 27,
+            "node_type": "treaty",
+            "start_date": 1670,
+            "end_date": 1785,
+            "year": 1670,
+            "id": "T27"
+        },
+        {
+            "bipartite": 1,
+            "title": "Vertrag über eine Verlängerung von Andrusovo (1667 I 20)",
+            "dates": "1672 IV 9",
+            "Treaty_Id": 28,
+            "node_type": "treaty",
+            "start_date": 1672,
+            "end_date": 1785,
+            "year": 1672,
+            "id": "T28"
+        },
+        {
+            "bipartite": 1,
+            "title": "Waffenstillstand von Moskau",
+            "dates": "1678 VIII 13",
+            "Treaty_Id": 29,
+            "node_type": "treaty",
+            "start_date": 1678,
+            "end_date": 1785,
+            "year": 1678,
+            "id": "T29"
+        },
+        {
+            "bipartite": 1,
+            "title": "Ewiger Friede von Moskau",
+            "dates": "1686 IV 26 / V 6  ",
+            "Treaty_Id": 30,
+            "node_type": "treaty",
+            "start_date": 1686,
+            "end_date": 1785,
+            "year": 1686,
+            "id": "T30"
+        },
+        {
+            "bipartite": 1,
+            "title": "Angriffsbündnis von Wien",
+            "dates": "1697 I 29",
+            "Treaty_Id": 31,
+            "node_type": "treaty",
+            "start_date": 1697,
+            "end_date": 1785,
+            "year": 1697,
+            "id": "T31"
+        },
+        {
+            "bipartite": 0,
+            "sides": "Venedig",
+            "Side_Id": 6,
+            "node_type": "country",
+            "start_date": 1697,
+            "end_date": 1785,
+            "id": "C6"
+        },
+        {
+            "bipartite": 1,
+            "title": "Waffenstillstand von Karlowitz (Beta-Version)",
+            "dates": "1698 XII 25",
+            "Treaty_Id": 32,
+            "node_type": "treaty",
+            "start_date": 1698,
+            "end_date": 1785,
+            "year": 1698,
+            "id": "T32"
+        },
+        {
+            "bipartite": 0,
+            "sides": "Osmanisches Reich",
+            "Side_Id": 7,
+            "node_type": "country",
+            "start_date": 1698,
+            "end_date": 1785,
+            "id": "C7"
+        },
+        {
+            "bipartite": 1,
+            "title": "Allianzvertrag von Moskau",
+            "dates": "1699 XI 11_21",
+            "Treaty_Id": 33,
+            "node_type": "treaty",
+            "start_date": 1699,
+            "end_date": 1785,
+            "year": 1699,
+            "id": "T33"
+        },
+        {
+            "bipartite": 0,
+            "sides": "Sachsen / Polen",
+            "Side_Id": 8,
+            "node_type": "country",
+            "start_date": 1699,
+            "end_date": 1785,
+            "id": "C8"
+        },
+        {
+            "bipartite": 1,
+            "title": "Friedensvertrag von Konstantinopel (Beta-Version)",
+            "dates": "1700 VI 13 / 1113 AH",
+            "Treaty_Id": 34,
+            "node_type": "treaty",
+            "start_date": 1700,
+            "end_date": 1785,
+            "year": 1700,
+            "id": "T34"
+        },
+        {
+            "bipartite": 1,
+            "title": "Waffenstillstand von Konstantinopel",
+            "dates": "1700 VII 3",
+            "Treaty_Id": 35,
+            "node_type": "treaty",
+            "start_date": 1700,
+            "end_date": 1785,
+            "year": 1700,
+            "id": "T35"
+        },
+        {
+            "bipartite": 1,
+            "title": "Allianzvertrag von Birse (Samogitien)",
+            "dates": "1701 II 26 / III 9",
+            "Treaty_Id": 36,
+            "node_type": "treaty",
+            "start_date": 1701,
+            "end_date": 1785,
+            "year": 1701,
+            "id": "T36"
+        },
+        {
+            "bipartite": 1,
+            "title": "Bestätigung von Birse",
+            "dates": "1701 II 26",
+            "Treaty_Id": 37,
+            "node_type": "treaty",
+            "start_date": 1701,
+            "end_date": 1785,
+            "year": 1701,
+            "id": "T37"
+        },
+        {
+            "bipartite": 1,
+            "title": "Bündnis von Schlotburg",
+            "dates": "1703 VI 28",
+            "Treaty_Id": 38,
+            "node_type": "treaty",
+            "start_date": 1703,
+            "end_date": 1785,
+            "year": 1703,
+            "id": "T38"
+        },
+        {
+            "bipartite": 1,
+            "title": "Bestätigung des Friedensvertrags von Schlotburg (1703 VI 28)",
+            "dates": "1703 X 1",
+            "Treaty_Id": 39,
+            "node_type": "treaty",
+            "start_date": 1703,
+            "end_date": 1785,
+            "year": 1703,
+            "id": "T39"
+        },
+        {
+            "bipartite": 1,
+            "title": "Allianz von Moskau",
+            "dates": "1703 XI 16",
+            "Treaty_Id": 40,
+            "node_type": "treaty",
+            "start_date": 1703,
+            "end_date": 1785,
+            "year": 1703,
+            "id": "T40"
+        },
+        {
+            "bipartite": 1,
+            "title": "Angriffs- und Schutzbündnis von Narwa",
+            "dates": "1704 VIII 19 / VIII 30",
+            "Treaty_Id": 41,
+            "node_type": "treaty",
+            "start_date": 1704,
+            "end_date": 1785,
+            "year": 1704,
+            "id": "T41"
+        },
+        {
+            "bipartite": 1,
+            "title": "Bündnis von Warschau",
+            "dates": "1707 IX 4",
+            "Treaty_Id": 42,
+            "node_type": "treaty",
+            "start_date": 1707,
+            "end_date": 1785,
+            "year": 1707,
+            "id": "T42"
+        },
+        {
+            "bipartite": 1,
+            "title": "Allianz von Thorn",
+            "dates": "1709 X 9_20",
+            "Treaty_Id": 43,
+            "node_type": "treaty",
+            "start_date": 1709,
+            "end_date": 1785,
+            "year": 1709,
+            "id": "T43"
+        },
+        {
+            "bipartite": 1,
+            "title": "Angriffs- und Schutzbündnis von Kopenhagen",
+            "dates": "1709 X 11_22",
+            "Treaty_Id": 44,
+            "node_type": "treaty",
+            "start_date": 1709,
+            "end_date": 1785,
+            "year": 1709,
+            "id": "T44"
+        },
+        {
+            "bipartite": 0,
+            "sides": "Dänemark",
+            "Side_Id": 9,
+            "node_type": "country",
+            "start_date": 1709,
+            "end_date": 1785,
+            "id": "C9"
+        },
+        {
+            "bipartite": 1,
+            "title": "Beitritt zu Cölln 1709 VII 15",
+            "dates": "1709 X 22_XI 1",
+            "Treaty_Id": 45,
+            "node_type": "treaty",
+            "start_date": 1709,
+            "end_date": 1785,
+            "year": 1709,
+            "id": "T45"
+        },
+        {
+            "bipartite": 1,
+            "title": "Heiratsvertrag von St. Petersburg",
+            "dates": "1710 VI 10_21",
+            "Treaty_Id": 46,
+            "node_type": "treaty",
+            "start_date": 1710,
+            "end_date": 1785,
+            "year": 1710,
+            "id": "T46"
+        },
+        {
+            "bipartite": 0,
+            "sides": "Livland (Herzogtum)",
+            "Side_Id": 11,
+            "node_type": "country",
+            "start_date": 1710,
+            "end_date": 1785,
+            "id": "C11"
+        },
+        {
+            "bipartite": 1,
+            "title": "Freundschaftsvertrag von Hannover",
+            "dates": "1710 VII 3",
+            "Treaty_Id": 47,
+            "node_type": "treaty",
+            "start_date": 1710,
+            "end_date": 1785,
+            "year": 1710,
+            "id": "T47"
+        },
+        {
+            "bipartite": 0,
+            "sides": "Hannover",
+            "Side_Id": 10,
+            "node_type": "country",
+            "start_date": 1710,
+            "end_date": 1785,
+            "id": "C10"
+        },
+        {
+            "bipartite": 1,
+            "title": "Friedensvertrag, geschlossen am Pruth (Beta Version)",
+            "dates": "1711 VII 22 / 1123 AH",
+            "Treaty_Id": 48,
+            "node_type": "treaty",
+            "start_date": 1711,
+            "end_date": 1785,
+            "year": 1711,
+            "id": "T48"
+        },
+        {
+            "bipartite": 1,
+            "title": "Friedenskonditionen, unterzeichnet am Fluß Pruth",
+            "dates": "1711 VII 22",
+            "Treaty_Id": 49,
+            "node_type": "treaty",
+            "start_date": 1711,
+            "end_date": 1785,
+            "year": 1711,
+            "id": "T49"
+        },
+        {
+            "bipartite": 1,
+            "title": "Friedensvertrag von Adrianopel",
+            "dates": "1713 VI 13_24",
+            "Treaty_Id": 50,
+            "node_type": "treaty",
+            "start_date": 1713,
+            "end_date": 1785,
+            "year": 1713,
+            "id": "T50"
+        },
+        {
+            "bipartite": 1,
+            "title": "Konvention von Wandsbek zur Fortsetzung des Krieges gegen Schweden",
+            "dates": "1713 VI 20",
+            "Treaty_Id": 51,
+            "node_type": "treaty",
+            "start_date": 1713,
+            "end_date": 1785,
+            "year": 1713,
+            "id": "T51"
+        },
+        {
+            "bipartite": 1,
+            "title": "Friedensvertrag von Edirne (Beta-Version)",
+            "dates": "1713 X/XI / 1125 AH",
+            "Treaty_Id": 52,
+            "node_type": "treaty",
+            "start_date": 1713,
+            "end_date": 1785,
+            "year": 1713,
+            "id": "T52"
+        },
+        {
+            "bipartite": 1,
+            "title": "Vertrag von Schwedt",
+            "dates": "1713 X 6",
+            "Treaty_Id": 53,
+            "node_type": "treaty",
+            "start_date": 1713,
+            "end_date": 1785,
+            "year": 1713,
+            "id": "T53"
+        },
+        {
+            "bipartite": 0,
+            "sides": "Preußen",
+            "Side_Id": 12,
+            "node_type": "country",
+            "start_date": 1713,
+            "end_date": 1785,
+            "id": "C12"
+        },
+        {
+            "bipartite": 1,
+            "title": "Allianzvertrag von St. Petersburg",
+            "dates": "1714 VI 1_12",
+            "Treaty_Id": 54,
+            "node_type": "treaty",
+            "start_date": 1714,
+            "end_date": 1785,
+            "year": 1714,
+            "id": "T54"
+        },
+        {
+            "bipartite": 1,
+            "title": "Vertrag über Kriegshilfe",
+            "dates": "1715 IX 30_X 30 / XI 10",
+            "Treaty_Id": 55,
+            "node_type": "treaty",
+            "start_date": 1715,
+            "end_date": 1785,
+            "year": 1715,
+            "id": "T55"
+        },
+        {
+            "bipartite": 1,
+            "title": "Allianzvertrag von Greifswald",
+            "dates": "1715 X 17_28",
+            "Treaty_Id": 56,
+            "node_type": "treaty",
+            "start_date": 1715,
+            "end_date": 1785,
+            "year": 1715,
+            "id": "T56"
+        },
+        {
+            "bipartite": 1,
+            "title": "Bündnis- und Heiratsvertrag von St. Petersburg",
+            "dates": "1716 I 22_II 2",
+            "Treaty_Id": 57,
+            "node_type": "treaty",
+            "start_date": 1716,
+            "end_date": 1785,
+            "year": 1716,
+            "id": "T57"
+        },
+        {
+            "bipartite": 0,
+            "sides": "Mecklenburg - Schwerin",
+            "Side_Id": 13,
+            "node_type": "country",
+            "start_date": 1716,
+            "end_date": 1785,
+            "id": "C13"
+        },
+        {
+            "bipartite": 1,
+            "title": "Bündnisvertrag von Danzig",
+            "dates": "1716 IV 8_19",
+            "Treaty_Id": 58,
+            "node_type": "treaty",
+            "start_date": 1716,
+            "end_date": 1785,
+            "year": 1716,
+            "id": "T58"
+        },
+        {
+            "bipartite": 1,
+            "title": "Allianzvertrag von Amsterdam",
+            "dates": "1717 VIII 15",
+            "Treaty_Id": 59,
+            "node_type": "treaty",
+            "start_date": 1717,
+            "end_date": 1785,
+            "year": 1717,
+            "id": "T59"
+        },
+        {
+            "bipartite": 0,
+            "sides": "Frankreich",
+            "Side_Id": 14,
+            "node_type": "country",
+            "start_date": 1717,
+            "end_date": 1785,
+            "id": "C14"
+        },
+        {
+            "bipartite": 1,
+            "title": "Friedensvertrag von Konstantinopel (Beta-Version)",
+            "dates": "1720 XI 16 / 1133 AH",
+            "Treaty_Id": 60,
+            "node_type": "treaty",
+            "start_date": 1720,
+            "end_date": 1785,
+            "year": 1720,
+            "id": "T60"
+        },
+        {
+            "bipartite": 1,
+            "title": "Friedensvertrag von Nystad",
+            "dates": "1721 VIII 30",
+            "Treaty_Id": 61,
+            "node_type": "treaty",
+            "start_date": 1721,
+            "end_date": 1785,
+            "year": 1721,
+            "id": "T61"
+        },
+        {
+            "bipartite": 1,
+            "title": "Friedensvertrag von Konstantinopel",
+            "dates": "1721 X 7",
+            "Treaty_Id": 62,
+            "node_type": "treaty",
+            "start_date": 1721,
+            "end_date": 1785,
+            "year": 1721,
+            "id": "T62"
+        },
+        {
+            "bipartite": 1,
+            "title": "Grenzvertrag von Wiborg",
+            "dates": "1723 III 30",
+            "Treaty_Id": 63,
+            "node_type": "treaty",
+            "start_date": 1723,
+            "end_date": 1785,
+            "year": 1723,
+            "id": "T63"
+        },
+        {
+            "bipartite": 1,
+            "title": "Defensivallianz von Stockholm",
+            "dates": "1724 II 22",
+            "Treaty_Id": 64,
+            "node_type": "treaty",
+            "start_date": 1724,
+            "end_date": 1785,
+            "year": 1724,
+            "id": "T64"
+        },
+        {
+            "bipartite": 1,
+            "title": "Friedensvertrag von Istanbul",
+            "dates": "1724 VI 24 / 1136 AH",
+            "Treaty_Id": 65,
+            "node_type": "treaty",
+            "start_date": 1724,
+            "end_date": 1785,
+            "year": 1724,
+            "id": "T65"
+        },
+        {
+            "bipartite": 1,
+            "title": "Allianz- und Garantievertrag von Kopenhagen",
+            "dates": "1732 V 26",
+            "Treaty_Id": 66,
+            "node_type": "treaty",
+            "start_date": 1732,
+            "end_date": 1785,
+            "year": 1732,
+            "id": "T66"
+        },
+        {
+            "bipartite": 0,
+            "sides": "Reich",
+            "Side_Id": 15,
+            "node_type": "country",
+            "start_date": 1732,
+            "end_date": 1785,
+            "id": "C15"
+        },
+        {
+            "bipartite": 1,
+            "title": "Militärkonvention von Kopenhagen",
+            "dates": "1733 IV 30",
+            "Treaty_Id": 67,
+            "node_type": "treaty",
+            "start_date": 1733,
+            "end_date": 1785,
+            "year": 1733,
+            "id": "T67"
+        },
+        {
+            "bipartite": 1,
+            "title": "Defensiv- und Garantievertrag von St. Petersburg",
+            "dates": "1733 VII 10",
+            "Treaty_Id": 68,
+            "node_type": "treaty",
+            "start_date": 1733,
+            "end_date": 1785,
+            "year": 1733,
+            "id": "T68"
+        },
+        {
+            "bipartite": 1,
+            "title": "Verlängerung der Defensivallianz von Stockholm",
+            "dates": "1735 VIII 5",
+            "Treaty_Id": 69,
+            "node_type": "treaty",
+            "start_date": 1735,
+            "end_date": 1785,
+            "year": 1735,
+            "id": "T69"
+        },
+        {
+            "bipartite": 1,
+            "title": "Beitritt von Wien zum Friedensvertrag von 1738 XI 18",
+            "dates": "1739 V 26",
+            "Treaty_Id": 70,
+            "node_type": "treaty",
+            "start_date": 1739,
+            "end_date": 1785,
+            "year": 1739,
+            "id": "T70"
+        },
+        {
+            "bipartite": 1,
+            "title": "Friedensvertrag von Belgrad",
+            "dates": "1739 IX 18 / 1152 AH",
+            "Treaty_Id": 71,
+            "node_type": "treaty",
+            "start_date": 1739,
+            "end_date": 1785,
+            "year": 1739,
+            "id": "T71"
+        },
+        {
+            "bipartite": 1,
+            "title": "Friedensvertrag von Konstantinopel",
+            "dates": "1741 IX 7 / 1154 AH",
+            "Treaty_Id": 72,
+            "node_type": "treaty",
+            "start_date": 1741,
+            "end_date": 1785,
+            "year": 1741,
+            "id": "T72"
+        },
+        {
+            "bipartite": 1,
+            "title": "Präliminarartikel von Åbo",
+            "dates": "1743 VI 16",
+            "Treaty_Id": 73,
+            "node_type": "treaty",
+            "start_date": 1743,
+            "end_date": 1785,
+            "year": 1743,
+            "id": "T73"
+        },
+        {
+            "bipartite": 1,
+            "title": "Friedensvertrag von Åbo",
+            "dates": "1743  VIII 7",
+            "Treaty_Id": 74,
+            "node_type": "treaty",
+            "start_date": 1743,
+            "end_date": 1785,
+            "year": 1743,
+            "id": "T74"
+        },
+        {
+            "bipartite": 1,
+            "title": "Defensivallianz von St. Petersburg (mit Separatartikel)",
+            "dates": "1744 I 24",
+            "Treaty_Id": 75,
+            "node_type": "treaty",
+            "start_date": 1744,
+            "end_date": 1785,
+            "year": 1744,
+            "id": "T75"
+        },
+        {
+            "bipartite": 1,
+            "title": "Defensivallianz von St. Petersburg",
+            "dates": "1745 VI 25",
+            "Treaty_Id": 76,
+            "node_type": "treaty",
+            "start_date": 1745,
+            "end_date": 1785,
+            "year": 1745,
+            "id": "T76"
+        },
+        {
+            "bipartite": 1,
+            "title": "Allianz- und Garantievertrag von St. Petersburg",
+            "dates": "1746 VI 10",
+            "Treaty_Id": 77,
+            "node_type": "treaty",
+            "start_date": 1746,
+            "end_date": 1785,
+            "year": 1746,
+            "id": "T77"
+        },
+        {
+            "bipartite": 1,
+            "title": "Konvention von St. Petersburg",
+            "dates": "1747 XI 19",
+            "Treaty_Id": 78,
+            "node_type": "treaty",
+            "start_date": 1747,
+            "end_date": 1785,
+            "year": 1747,
+            "id": "T78"
+        },
+        {
+            "bipartite": 0,
+            "sides": "Generalstaaten",
+            "Side_Id": 16,
+            "node_type": "country",
+            "start_date": 1747,
+            "end_date": 1785,
+            "id": "C16"
+        },
+        {
+            "bipartite": 1,
+            "title": "Beitritt von St. Petersburg zum Allianzvertrag 1756 V 1",
+            "dates": "1756 XII 31",
+            "Treaty_Id": 79,
+            "node_type": "treaty",
+            "start_date": 1756,
+            "end_date": 1785,
+            "year": 1756,
+            "id": "T79"
+        },
+        {
+            "bipartite": 1,
+            "title": "Beitritt zur Konvention zur Umsetzung des Westfälischen Friedens",
+            "dates": "1757 XI 5",
+            "Treaty_Id": 80,
+            "node_type": "treaty",
+            "start_date": 1757,
+            "end_date": 1785,
+            "year": 1757,
+            "id": "T80"
+        },
+        {
+            "bipartite": 1,
+            "title": "Erklärung zur Sicherheit der Ostseeschifffahrt",
+            "dates": "1758 IV 26",
+            "Treaty_Id": 81,
+            "node_type": "treaty",
+            "start_date": 1758,
+            "end_date": 1785,
+            "year": 1758,
+            "id": "T81"
+        },
+        {
+            "bipartite": 1,
+            "title": "Erneuerung der Defensivallianz von St. Petersburg",
+            "dates": "1758 VI 24",
+            "Treaty_Id": 82,
+            "node_type": "treaty",
+            "start_date": 1758,
+            "end_date": 1785,
+            "year": 1758,
+            "id": "T82"
+        },
+        {
+            "bipartite": 1,
+            "title": "Konvention zur Sicherheit der Ostseeschiffahrt",
+            "dates": "1759 III 9",
+            "Treaty_Id": 83,
+            "node_type": "treaty",
+            "start_date": 1759,
+            "end_date": 1785,
+            "year": 1759,
+            "id": "T83"
+        },
+        {
+            "bipartite": 1,
+            "title": "Beitritt von St. Petersburg zur Allianz von Versailles 1758 XII 30",
+            "dates": "1760 III 7",
+            "Treaty_Id": 84,
+            "node_type": "treaty",
+            "start_date": 1760,
+            "end_date": 1785,
+            "year": 1760,
+            "id": "T84"
+        },
+        {
+            "bipartite": 1,
+            "title": "Konvention über Dänemarks Beitritt zur Erklärung zur Sicherheit der Ostseeschifffahrt",
+            "dates": "1760 III 17",
+            "Treaty_Id": 85,
+            "node_type": "treaty",
+            "start_date": 1760,
+            "end_date": 1785,
+            "year": 1760,
+            "id": "T85"
+        },
+        {
+            "bipartite": 1,
+            "title": "Defensivallianz von St. Petersburg",
+            "dates": "1765 II 28_III 11",
+            "Treaty_Id": 86,
+            "node_type": "treaty",
+            "start_date": 1765,
+            "end_date": 1785,
+            "year": 1765,
+            "id": "T86"
+        },
+        {
+            "bipartite": 1,
+            "title": "Ewiger Friede",
+            "dates": "1768 II 24",
+            "Treaty_Id": 87,
+            "node_type": "treaty",
+            "start_date": 1768,
+            "end_date": 1785,
+            "year": 1768,
+            "id": "T87"
+        },
+        {
+            "bipartite": 1,
+            "title": "Allianz von Kopenhagen",
+            "dates": "1769 XII 13",
+            "Treaty_Id": 88,
+            "node_type": "treaty",
+            "start_date": 1769,
+            "end_date": 1785,
+            "year": 1769,
+            "id": "T88"
+        },
+        {
+            "bipartite": 1,
+            "title": "Digitaler Kartensatz zum Teilungsvertrag von St. Petersburg",
+            "dates": "1772 VII 25_VIII 5",
+            "Treaty_Id": 89,
+            "node_type": "treaty",
+            "start_date": 1772,
+            "end_date": 1785,
+            "year": 1772,
+            "id": "T89"
+        },
+        {
+            "bipartite": 1,
+            "title": "Allianz von St. Petersburg",
+            "dates": "1773 VIII 1_12",
+            "Treaty_Id": 90,
+            "node_type": "treaty",
+            "start_date": 1773,
+            "end_date": 1785,
+            "year": 1773,
+            "id": "T90"
+        },
+        {
+            "bipartite": 1,
+            "title": "Digitaler Kartensatz zum Friedensvertrag von Kütschük-Kainardschi",
+            "dates": "1774 VII 10/21",
+            "Treaty_Id": 91,
+            "node_type": "treaty",
+            "start_date": 1774,
+            "end_date": 1785,
+            "year": 1774,
+            "id": "T91"
+        },
+        {
+            "bipartite": 1,
+            "title": "Friedensvertrag von Kütschük Kainardschi / Kaynarca (Beta-Version)",
+            "dates": "1774 VII 21",
+            "Treaty_Id": 92,
+            "node_type": "treaty",
+            "start_date": 1774,
+            "end_date": 1785,
+            "year": 1774,
+            "id": "T92"
+        },
+        {
+            "bipartite": 1,
+            "title": "Friedensvertrag von Aynalikavak (Beta-Version)",
+            "dates": "1779 III 21",
+            "Treaty_Id": 93,
+            "node_type": "treaty",
+            "start_date": 1779,
+            "end_date": 1785,
+            "year": 1779,
+            "id": "T93"
+        },
+        {
+            "bipartite": 1,
+            "title": "Garantieerklärung für die Konvention von Teschen zwischen Österreich und Preussen",
+            "dates": "1779 V 13",
+            "Treaty_Id": 94,
+            "node_type": "treaty",
+            "start_date": 1779,
+            "end_date": 1785,
+            "year": 1779,
+            "id": "T94"
+        },
+        {
+            "bipartite": 1,
+            "title": "Konvention über die bewaffnete Neutralität",
+            "dates": "1780 VI 28_VII 9",
+            "Treaty_Id": 95,
+            "node_type": "treaty",
+            "start_date": 1780,
+            "end_date": 1785,
+            "year": 1780,
+            "id": "T95"
+        },
+        {
+            "bipartite": 1,
+            "title": "Konvention über die bewaffnete Neutralität",
+            "dates": "1780 VII 21_VIII 1",
+            "Treaty_Id": 96,
+            "node_type": "treaty",
+            "start_date": 1780,
+            "end_date": 1785,
+            "year": 1780,
+            "id": "T96"
+        },
+        {
+            "bipartite": 1,
+            "title": "Schiffahrtskonvention von St. Petersburg",
+            "dates": "1782 VII 13",
+            "Treaty_Id": 97,
+            "node_type": "treaty",
+            "start_date": 1782,
+            "end_date": 1785,
+            "year": 1782,
+            "id": "T97"
+        },
+        {
+            "bipartite": 0,
+            "sides": "Portugal",
+            "Side_Id": 17,
+            "node_type": "country",
+            "start_date": 1782,
+            "end_date": 1785,
+            "id": "C17"
+        },
+        {
+            "bipartite": 1,
+            "title": "Freundschafts- und Handelsvertrag von St. Petersburg",
+            "dates": "1782 X 8_19",
+            "Treaty_Id": 98,
+            "node_type": "treaty",
+            "start_date": 1782,
+            "end_date": 1785,
+            "year": 1782,
+            "id": "T98"
+        },
+        {
+            "bipartite": 1,
+            "title": "Friedensvertrag von Versailles",
+            "dates": "1783 IX 3",
+            "Treaty_Id": 99,
+            "node_type": "treaty",
+            "start_date": 1783,
+            "end_date": 1785,
+            "year": 1783,
+            "id": "T99"
+        },
+        {
+            "bipartite": 0,
+            "sides": "Großbritannien",
+            "Side_Id": 18,
+            "node_type": "country",
+            "start_date": 1783,
+            "end_date": 1785,
+            "id": "C18"
+        },
+        {
+            "bipartite": 1,
+            "title": "Friedensvertrag von Konstantinopel (Beta-Version)",
+            "dates": "1784 I 08 / 1198 AH",
+            "Treaty_Id": 100,
+            "node_type": "treaty",
+            "start_date": 1784,
+            "end_date": 1785,
+            "year": 1784,
+            "id": "T100"
+        },
+        {
+            "bipartite": 1,
+            "title": "Vertrag von Nertschinsk",
+            "dates": "1689",
+            "Treaty_Id": 101,
+            "node_type": "treaty",
+            "start_date": 1689,
+            "end_date": 1785,
+            "year": 1689,
+            "id": "T101"
+        },
+        {
+            "bipartite": 0,
+            "sides": "China",
+            "Side_Id": 19,
+            "node_type": "country",
+            "start_date": 1689,
+            "end_date": 1785,
+            "id": "C19"
+        }
+    ],
+    "links": [
+        {
+            "dates": "1514 VIII 4",
+            "start_date": 1514,
+            "end_date": 1785,
+            "source": "T1",
+            "target": "C1"
+        },
+        {
+            "dates": "1514 VIII 4",
+            "start_date": 1514,
+            "end_date": 1785,
+            "source": "T1",
+            "target": "C2"
+        },
+        {
+            "dates": "1697 I 29",
+            "start_date": 1697,
+            "end_date": 1785,
+            "source": "C1",
+            "target": "T31"
+        },
+        {
+            "dates": "1522 XII 25_1523 I 4",
+            "start_date": 1522,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T2"
+        },
+        {
+            "dates": "1523 II 22",
+            "start_date": 1523,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T3"
+        },
+        {
+            "dates": "1524 IV 3",
+            "start_date": 1524,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T4"
+        },
+        {
+            "dates": "1537 III 25_IV 4",
+            "start_date": 1537,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T5"
+        },
+        {
+            "dates": "1561 VIII",
+            "start_date": 1561,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T6"
+        },
+        {
+            "dates": "1564 IX ",
+            "start_date": 1564,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T7"
+        },
+        {
+            "dates": "1583 VIII 10",
+            "start_date": 1583,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T8"
+        },
+        {
+            "dates": "1595 V 18",
+            "start_date": 1595,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T9"
+        },
+        {
+            "dates": "1595 V 18",
+            "start_date": 1595,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T10"
+        },
+        {
+            "dates": "1608 VII 20_30",
+            "start_date": 1608,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T11"
+        },
+        {
+            "dates": "1609 II 28",
+            "start_date": 1609,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T12"
+        },
+        {
+            "dates": "1616 II 22_III 4",
+            "start_date": 1616,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T13"
+        },
+        {
+            "dates": "1617 II 27_III 9",
+            "start_date": 1617,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T14"
+        },
+        {
+            "dates": "1623 VI 28_VII 8",
+            "start_date": 1623,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T15"
+        },
+        {
+            "dates": "1627 XII 18_28",
+            "start_date": 1627,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T16"
+        },
+        {
+            "dates": "1629 IX ",
+            "start_date": 1629,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T17"
+        },
+        {
+            "dates": "1634 V 17_27",
+            "start_date": 1634,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T18"
+        },
+        {
+            "dates": "1634 VI 14",
+            "start_date": 1634,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T19"
+        },
+        {
+            "dates": "1638 IX",
+            "start_date": 1638,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T20"
+        },
+        {
+            "dates": "1646 III 2",
+            "start_date": 1646,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T21"
+        },
+        {
+            "dates": "1649 X 19",
+            "start_date": 1649,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T22"
+        },
+        {
+            "dates": "1658 V 25",
+            "start_date": 1658,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T23"
+        },
+        {
+            "dates": "1658 XII 20",
+            "start_date": 1658,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T24"
+        },
+        {
+            "dates": "1661 VI 21",
+            "start_date": 1661,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T25"
+        },
+        {
+            "dates": "1667 I 20_30",
+            "start_date": 1667,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T26"
+        },
+        {
+            "dates": "1670 III 7_17 ",
+            "start_date": 1670,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T27"
+        },
+        {
+            "dates": "1672 IV 9",
+            "start_date": 1672,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T28"
+        },
+        {
+            "dates": "1678 VIII 13",
+            "start_date": 1678,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T29"
+        },
+        {
+            "dates": "1686 IV 26 / V 6  ",
+            "start_date": 1686,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T30"
+        },
+        {
+            "dates": "1697 I 29",
+            "start_date": 1697,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T31"
+        },
+        {
+            "dates": "1698 XII 25",
+            "start_date": 1698,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T32"
+        },
+        {
+            "dates": "1699 XI 11_21",
+            "start_date": 1699,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T33"
+        },
+        {
+            "dates": "1700 VI 13 / 1113 AH",
+            "start_date": 1700,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T34"
+        },
+        {
+            "dates": "1700 VII 3",
+            "start_date": 1700,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T35"
+        },
+        {
+            "dates": "1701 II 26 / III 9",
+            "start_date": 1701,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T36"
+        },
+        {
+            "dates": "1701 II 26",
+            "start_date": 1701,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T37"
+        },
+        {
+            "dates": "1703 VI 28",
+            "start_date": 1703,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T38"
+        },
+        {
+            "dates": "1703 X 1",
+            "start_date": 1703,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T39"
+        },
+        {
+            "dates": "1703 XI 16",
+            "start_date": 1703,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T40"
+        },
+        {
+            "dates": "1704 VIII 19 / VIII 30",
+            "start_date": 1704,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T41"
+        },
+        {
+            "dates": "1707 IX 4",
+            "start_date": 1707,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T42"
+        },
+        {
+            "dates": "1709 X 9_20",
+            "start_date": 1709,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T43"
+        },
+        {
+            "dates": "1709 X 11_22",
+            "start_date": 1709,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T44"
+        },
+        {
+            "dates": "1709 X 22_XI 1",
+            "start_date": 1709,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T45"
+        },
+        {
+            "dates": "1710 VI 10_21",
+            "start_date": 1710,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T46"
+        },
+        {
+            "dates": "1710 VII 3",
+            "start_date": 1710,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T47"
+        },
+        {
+            "dates": "1711 VII 22 / 1123 AH",
+            "start_date": 1711,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T48"
+        },
+        {
+            "dates": "1711 VII 22",
+            "start_date": 1711,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T49"
+        },
+        {
+            "dates": "1713 VI 13_24",
+            "start_date": 1713,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T50"
+        },
+        {
+            "dates": "1713 VI 20",
+            "start_date": 1713,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T51"
+        },
+        {
+            "dates": "1713 X/XI / 1125 AH",
+            "start_date": 1713,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T52"
+        },
+        {
+            "dates": "1713 X 6",
+            "start_date": 1713,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T53"
+        },
+        {
+            "dates": "1714 VI 1_12",
+            "start_date": 1714,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T54"
+        },
+        {
+            "dates": "1715 IX 30_X 30 / XI 10",
+            "start_date": 1715,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T55"
+        },
+        {
+            "dates": "1715 X 17_28",
+            "start_date": 1715,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T56"
+        },
+        {
+            "dates": "1716 I 22_II 2",
+            "start_date": 1716,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T57"
+        },
+        {
+            "dates": "1716 IV 8_19",
+            "start_date": 1716,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T58"
+        },
+        {
+            "dates": "1717 VIII 15",
+            "start_date": 1717,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T59"
+        },
+        {
+            "dates": "1720 XI 16 / 1133 AH",
+            "start_date": 1720,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T60"
+        },
+        {
+            "dates": "1721 VIII 30",
+            "start_date": 1721,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T61"
+        },
+        {
+            "dates": "1721 X 7",
+            "start_date": 1721,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T62"
+        },
+        {
+            "dates": "1723 III 30",
+            "start_date": 1723,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T63"
+        },
+        {
+            "dates": "1724 II 22",
+            "start_date": 1724,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T64"
+        },
+        {
+            "dates": "1724 VI 24 / 1136 AH",
+            "start_date": 1724,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T65"
+        },
+        {
+            "dates": "1732 V 26",
+            "start_date": 1732,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T66"
+        },
+        {
+            "dates": "1733 IV 30",
+            "start_date": 1733,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T67"
+        },
+        {
+            "dates": "1733 VII 10",
+            "start_date": 1733,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T68"
+        },
+        {
+            "dates": "1735 VIII 5",
+            "start_date": 1735,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T69"
+        },
+        {
+            "dates": "1739 V 26",
+            "start_date": 1739,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T70"
+        },
+        {
+            "dates": "1739 IX 18 / 1152 AH",
+            "start_date": 1739,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T71"
+        },
+        {
+            "dates": "1741 IX 7 / 1154 AH",
+            "start_date": 1741,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T72"
+        },
+        {
+            "dates": "1743 VI 16",
+            "start_date": 1743,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T73"
+        },
+        {
+            "dates": "1743  VIII 7",
+            "start_date": 1743,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T74"
+        },
+        {
+            "dates": "1744 I 24",
+            "start_date": 1744,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T75"
+        },
+        {
+            "dates": "1745 VI 25",
+            "start_date": 1745,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T76"
+        },
+        {
+            "dates": "1746 VI 10",
+            "start_date": 1746,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T77"
+        },
+        {
+            "dates": "1747 XI 19",
+            "start_date": 1747,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T78"
+        },
+        {
+            "dates": "1756 XII 31",
+            "start_date": 1756,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T79"
+        },
+        {
+            "dates": "1757 XI 5",
+            "start_date": 1757,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T80"
+        },
+        {
+            "dates": "1758 IV 26",
+            "start_date": 1758,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T81"
+        },
+        {
+            "dates": "1758 VI 24",
+            "start_date": 1758,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T82"
+        },
+        {
+            "dates": "1759 III 9",
+            "start_date": 1759,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T83"
+        },
+        {
+            "dates": "1760 III 7",
+            "start_date": 1760,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T84"
+        },
+        {
+            "dates": "1760 III 17",
+            "start_date": 1760,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T85"
+        },
+        {
+            "dates": "1765 II 28_III 11",
+            "start_date": 1765,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T86"
+        },
+        {
+            "dates": "1768 II 24",
+            "start_date": 1768,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T87"
+        },
+        {
+            "dates": "1769 XII 13",
+            "start_date": 1769,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T88"
+        },
+        {
+            "dates": "1772 VII 25_VIII 5",
+            "start_date": 1772,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T89"
+        },
+        {
+            "dates": "1773 VIII 1_12",
+            "start_date": 1773,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T90"
+        },
+        {
+            "dates": "1774 VII 10/21",
+            "start_date": 1774,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T91"
+        },
+        {
+            "dates": "1774 VII 21",
+            "start_date": 1774,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T92"
+        },
+        {
+            "dates": "1779 III 21",
+            "start_date": 1779,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T93"
+        },
+        {
+            "dates": "1779 V 13",
+            "start_date": 1779,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T94"
+        },
+        {
+            "dates": "1780 VI 28_VII 9",
+            "start_date": 1780,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T95"
+        },
+        {
+            "dates": "1780 VII 21_VIII 1",
+            "start_date": 1780,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T96"
+        },
+        {
+            "dates": "1782 VII 13",
+            "start_date": 1782,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T97"
+        },
+        {
+            "dates": "1782 X 8_19",
+            "start_date": 1782,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T98"
+        },
+        {
+            "dates": "1783 IX 3",
+            "start_date": 1783,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T99"
+        },
+        {
+            "dates": "1784 I 08 / 1198 AH",
+            "start_date": 1784,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T100"
+        },
+        {
+            "dates": "1689",
+            "start_date": 1689,
+            "end_date": 1785,
+            "source": "C2",
+            "target": "T101"
+        },
+        {
+            "dates": "1522 XII 25_1523 I 4",
+            "start_date": 1522,
+            "end_date": 1785,
+            "source": "T2",
+            "target": "C3"
+        },
+        {
+            "dates": "1523 II 22",
+            "start_date": 1523,
+            "end_date": 1785,
+            "source": "C3",
+            "target": "T3"
+        },
+        {
+            "dates": "1595 V 18",
+            "start_date": 1595,
+            "end_date": 1785,
+            "source": "C3",
+            "target": "T10"
+        },
+        {
+            "dates": "1608 VII 20_30",
+            "start_date": 1608,
+            "end_date": 1785,
+            "source": "C3",
+            "target": "T11"
+        },
+        {
+            "dates": "1634 V 17_27",
+            "start_date": 1634,
+            "end_date": 1785,
+            "source": "C3",
+            "target": "T18"
+        },
+        {
+            "dates": "1634 VI 14",
+            "start_date": 1634,
+            "end_date": 1785,
+            "source": "C3",
+            "target": "T19"
+        },
+        {
+            "dates": "1667 I 20_30",
+            "start_date": 1667,
+            "end_date": 1785,
+            "source": "C3",
+            "target": "T26"
+        },
+        {
+            "dates": "1670 III 7_17 ",
+            "start_date": 1670,
+            "end_date": 1785,
+            "source": "C3",
+            "target": "T27"
+        },
+        {
+            "dates": "1672 IV 9",
+            "start_date": 1672,
+            "end_date": 1785,
+            "source": "C3",
+            "target": "T28"
+        },
+        {
+            "dates": "1678 VIII 13",
+            "start_date": 1678,
+            "end_date": 1785,
+            "source": "C3",
+            "target": "T29"
+        },
+        {
+            "dates": "1686 IV 26 / V 6  ",
+            "start_date": 1686,
+            "end_date": 1785,
+            "source": "C3",
+            "target": "T30"
+        },
+        {
+            "dates": "1768 II 24",
+            "start_date": 1768,
+            "end_date": 1785,
+            "source": "C3",
+            "target": "T87"
+        },
+        {
+            "dates": "1524 IV 3",
+            "start_date": 1524,
+            "end_date": 1785,
+            "source": "T4",
+            "target": "C4"
+        },
+        {
+            "dates": "1537 III 25_IV 4",
+            "start_date": 1537,
+            "end_date": 1785,
+            "source": "C4",
+            "target": "T5"
+        },
+        {
+            "dates": "1561 VIII",
+            "start_date": 1561,
+            "end_date": 1785,
+            "source": "C4",
+            "target": "T6"
+        },
+        {
+            "dates": "1564 IX ",
+            "start_date": 1564,
+            "end_date": 1785,
+            "source": "C4",
+            "target": "T7"
+        },
+        {
+            "dates": "1583 VIII 10",
+            "start_date": 1583,
+            "end_date": 1785,
+            "source": "C4",
+            "target": "T8"
+        },
+        {
+            "dates": "1595 V 18",
+            "start_date": 1595,
+            "end_date": 1785,
+            "source": "C4",
+            "target": "T9"
+        },
+        {
+            "dates": "1595 V 18",
+            "start_date": 1595,
+            "end_date": 1785,
+            "source": "C4",
+            "target": "T10"
+        },
+        {
+            "dates": "1609 II 28",
+            "start_date": 1609,
+            "end_date": 1785,
+            "source": "C4",
+            "target": "T12"
+        },
+        {
+            "dates": "1616 II 22_III 4",
+            "start_date": 1616,
+            "end_date": 1785,
+            "source": "C4",
+            "target": "T13"
+        },
+        {
+            "dates": "1617 II 27_III 9",
+            "start_date": 1617,
+            "end_date": 1785,
+            "source": "C4",
+            "target": "T14"
+        },
+        {
+            "dates": "1649 X 19",
+            "start_date": 1649,
+            "end_date": 1785,
+            "source": "C4",
+            "target": "T22"
+        },
+        {
+            "dates": "1658 V 25",
+            "start_date": 1658,
+            "end_date": 1785,
+            "source": "C4",
+            "target": "T23"
+        },
+        {
+            "dates": "1658 XII 20",
+            "start_date": 1658,
+            "end_date": 1785,
+            "source": "C4",
+            "target": "T24"
+        },
+        {
+            "dates": "1661 VI 21",
+            "start_date": 1661,
+            "end_date": 1785,
+            "source": "C4",
+            "target": "T25"
+        },
+        {
+            "dates": "1721 VIII 30",
+            "start_date": 1721,
+            "end_date": 1785,
+            "source": "C4",
+            "target": "T61"
+        },
+        {
+            "dates": "1723 III 30",
+            "start_date": 1723,
+            "end_date": 1785,
+            "source": "C4",
+            "target": "T63"
+        },
+        {
+            "dates": "1724 II 22",
+            "start_date": 1724,
+            "end_date": 1785,
+            "source": "C4",
+            "target": "T64"
+        },
+        {
+            "dates": "1735 VIII 5",
+            "start_date": 1735,
+            "end_date": 1785,
+            "source": "C4",
+            "target": "T69"
+        },
+        {
+            "dates": "1743 VI 16",
+            "start_date": 1743,
+            "end_date": 1785,
+            "source": "C4",
+            "target": "T73"
+        },
+        {
+            "dates": "1743  VIII 7",
+            "start_date": 1743,
+            "end_date": 1785,
+            "source": "C4",
+            "target": "T74"
+        },
+        {
+            "dates": "1745 VI 25",
+            "start_date": 1745,
+            "end_date": 1785,
+            "source": "C4",
+            "target": "T76"
+        },
+        {
+            "dates": "1758 IV 26",
+            "start_date": 1758,
+            "end_date": 1785,
+            "source": "C4",
+            "target": "T81"
+        },
+        {
+            "dates": "1758 VI 24",
+            "start_date": 1758,
+            "end_date": 1785,
+            "source": "C4",
+            "target": "T82"
+        },
+        {
+            "dates": "1759 III 9",
+            "start_date": 1759,
+            "end_date": 1785,
+            "source": "C4",
+            "target": "T83"
+        },
+        {
+            "dates": "1760 III 17",
+            "start_date": 1760,
+            "end_date": 1785,
+            "source": "C4",
+            "target": "T85"
+        },
+        {
+            "dates": "1780 VII 21_VIII 1",
+            "start_date": 1780,
+            "end_date": 1785,
+            "source": "C4",
+            "target": "T96"
+        },
+        {
+            "dates": "1623 VI 28_VII 8",
+            "start_date": 1623,
+            "end_date": 1785,
+            "source": "T15",
+            "target": "C5"
+        },
+        {
+            "dates": "1627 XII 18_28",
+            "start_date": 1627,
+            "end_date": 1785,
+            "source": "C5",
+            "target": "T16"
+        },
+        {
+            "dates": "1629 IX ",
+            "start_date": 1629,
+            "end_date": 1785,
+            "source": "C5",
+            "target": "T17"
+        },
+        {
+            "dates": "1638 IX",
+            "start_date": 1638,
+            "end_date": 1785,
+            "source": "C5",
+            "target": "T20"
+        },
+        {
+            "dates": "1700 VII 3",
+            "start_date": 1700,
+            "end_date": 1785,
+            "source": "C5",
+            "target": "T35"
+        },
+        {
+            "dates": "1707 IX 4",
+            "start_date": 1707,
+            "end_date": 1785,
+            "source": "C5",
+            "target": "T42"
+        },
+        {
+            "dates": "1713 VI 13_24",
+            "start_date": 1713,
+            "end_date": 1785,
+            "source": "C5",
+            "target": "T50"
+        },
+        {
+            "dates": "1697 I 29",
+            "start_date": 1697,
+            "end_date": 1785,
+            "source": "T31",
+            "target": "C6"
+        },
+        {
+            "dates": "1698 XII 25",
+            "start_date": 1698,
+            "end_date": 1785,
+            "source": "T32",
+            "target": "C7"
+        },
+        {
+            "dates": "1700 VI 13 / 1113 AH",
+            "start_date": 1700,
+            "end_date": 1785,
+            "source": "C7",
+            "target": "T34"
+        },
+        {
+            "dates": "1711 VII 22 / 1123 AH",
+            "start_date": 1711,
+            "end_date": 1785,
+            "source": "C7",
+            "target": "T48"
+        },
+        {
+            "dates": "1711 VII 22",
+            "start_date": 1711,
+            "end_date": 1785,
+            "source": "C7",
+            "target": "T49"
+        },
+        {
+            "dates": "1713 X/XI / 1125 AH",
+            "start_date": 1713,
+            "end_date": 1785,
+            "source": "C7",
+            "target": "T52"
+        },
+        {
+            "dates": "1720 XI 16 / 1133 AH",
+            "start_date": 1720,
+            "end_date": 1785,
+            "source": "C7",
+            "target": "T60"
+        },
+        {
+            "dates": "1721 X 7",
+            "start_date": 1721,
+            "end_date": 1785,
+            "source": "C7",
+            "target": "T62"
+        },
+        {
+            "dates": "1724 VI 24 / 1136 AH",
+            "start_date": 1724,
+            "end_date": 1785,
+            "source": "C7",
+            "target": "T65"
+        },
+        {
+            "dates": "1739 IX 18 / 1152 AH",
+            "start_date": 1739,
+            "end_date": 1785,
+            "source": "C7",
+            "target": "T71"
+        },
+        {
+            "dates": "1741 IX 7 / 1154 AH",
+            "start_date": 1741,
+            "end_date": 1785,
+            "source": "C7",
+            "target": "T72"
+        },
+        {
+            "dates": "1774 VII 10/21",
+            "start_date": 1774,
+            "end_date": 1785,
+            "source": "C7",
+            "target": "T91"
+        },
+        {
+            "dates": "1774 VII 21",
+            "start_date": 1774,
+            "end_date": 1785,
+            "source": "C7",
+            "target": "T92"
+        },
+        {
+            "dates": "1779 III 21",
+            "start_date": 1779,
+            "end_date": 1785,
+            "source": "C7",
+            "target": "T93"
+        },
+        {
+            "dates": "1784 I 08 / 1198 AH",
+            "start_date": 1784,
+            "end_date": 1785,
+            "source": "C7",
+            "target": "T100"
+        },
+        {
+            "dates": "1699 XI 11_21",
+            "start_date": 1699,
+            "end_date": 1785,
+            "source": "T33",
+            "target": "C8"
+        },
+        {
+            "dates": "1701 II 26 / III 9",
+            "start_date": 1701,
+            "end_date": 1785,
+            "source": "C8",
+            "target": "T36"
+        },
+        {
+            "dates": "1703 VI 28",
+            "start_date": 1703,
+            "end_date": 1785,
+            "source": "C8",
+            "target": "T38"
+        },
+        {
+            "dates": "1703 X 1",
+            "start_date": 1703,
+            "end_date": 1785,
+            "source": "C8",
+            "target": "T39"
+        },
+        {
+            "dates": "1703 XI 16",
+            "start_date": 1703,
+            "end_date": 1785,
+            "source": "C8",
+            "target": "T40"
+        },
+        {
+            "dates": "1704 VIII 19 / VIII 30",
+            "start_date": 1704,
+            "end_date": 1785,
+            "source": "C8",
+            "target": "T41"
+        },
+        {
+            "dates": "1709 X 9_20",
+            "start_date": 1709,
+            "end_date": 1785,
+            "source": "C8",
+            "target": "T43"
+        },
+        {
+            "dates": "1713 VI 20",
+            "start_date": 1713,
+            "end_date": 1785,
+            "source": "C8",
+            "target": "T51"
+        },
+        {
+            "dates": "1733 VII 10",
+            "start_date": 1733,
+            "end_date": 1785,
+            "source": "C8",
+            "target": "T68"
+        },
+        {
+            "dates": "1744 I 24",
+            "start_date": 1744,
+            "end_date": 1785,
+            "source": "C8",
+            "target": "T75"
+        },
+        {
+            "dates": "1709 X 11_22",
+            "start_date": 1709,
+            "end_date": 1785,
+            "source": "T44",
+            "target": "C9"
+        },
+        {
+            "dates": "1713 VI 20",
+            "start_date": 1713,
+            "end_date": 1785,
+            "source": "C9",
+            "target": "T51"
+        },
+        {
+            "dates": "1732 V 26",
+            "start_date": 1732,
+            "end_date": 1785,
+            "source": "C9",
+            "target": "T66"
+        },
+        {
+            "dates": "1733 IV 30",
+            "start_date": 1733,
+            "end_date": 1785,
+            "source": "C9",
+            "target": "T67"
+        },
+        {
+            "dates": "1746 VI 10",
+            "start_date": 1746,
+            "end_date": 1785,
+            "source": "C9",
+            "target": "T77"
+        },
+        {
+            "dates": "1760 III 17",
+            "start_date": 1760,
+            "end_date": 1785,
+            "source": "C9",
+            "target": "T85"
+        },
+        {
+            "dates": "1765 II 28_III 11",
+            "start_date": 1765,
+            "end_date": 1785,
+            "source": "C9",
+            "target": "T86"
+        },
+        {
+            "dates": "1769 XII 13",
+            "start_date": 1769,
+            "end_date": 1785,
+            "source": "C9",
+            "target": "T88"
+        },
+        {
+            "dates": "1773 VIII 1_12",
+            "start_date": 1773,
+            "end_date": 1785,
+            "source": "C9",
+            "target": "T90"
+        },
+        {
+            "dates": "1780 VI 28_VII 9",
+            "start_date": 1780,
+            "end_date": 1785,
+            "source": "C9",
+            "target": "T95"
+        },
+        {
+            "dates": "1782 X 8_19",
+            "start_date": 1782,
+            "end_date": 1785,
+            "source": "C9",
+            "target": "T98"
+        },
+        {
+            "dates": "1710 VI 10_21",
+            "start_date": 1710,
+            "end_date": 1785,
+            "source": "T46",
+            "target": "C11"
+        },
+        {
+            "dates": "1710 VII 3",
+            "start_date": 1710,
+            "end_date": 1785,
+            "source": "T47",
+            "target": "C10"
+        },
+        {
+            "dates": "1715 X 17_28",
+            "start_date": 1715,
+            "end_date": 1785,
+            "source": "C10",
+            "target": "T56"
+        },
+        {
+            "dates": "1713 X 6",
+            "start_date": 1713,
+            "end_date": 1785,
+            "source": "T53",
+            "target": "C12"
+        },
+        {
+            "dates": "1714 VI 1_12",
+            "start_date": 1714,
+            "end_date": 1785,
+            "source": "C12",
+            "target": "T54"
+        },
+        {
+            "dates": "1715 IX 30_X 30 / XI 10",
+            "start_date": 1715,
+            "end_date": 1785,
+            "source": "C12",
+            "target": "T55"
+        },
+        {
+            "dates": "1717 VIII 15",
+            "start_date": 1717,
+            "end_date": 1785,
+            "source": "C12",
+            "target": "T59"
+        },
+        {
+            "dates": "1772 VII 25_VIII 5",
+            "start_date": 1772,
+            "end_date": 1785,
+            "source": "C12",
+            "target": "T89"
+        },
+        {
+            "dates": "1716 I 22_II 2",
+            "start_date": 1716,
+            "end_date": 1785,
+            "source": "T57",
+            "target": "C13"
+        },
+        {
+            "dates": "1716 IV 8_19",
+            "start_date": 1716,
+            "end_date": 1785,
+            "source": "C13",
+            "target": "T58"
+        },
+        {
+            "dates": "1717 VIII 15",
+            "start_date": 1717,
+            "end_date": 1785,
+            "source": "T59",
+            "target": "C14"
+        },
+        {
+            "dates": "1779 V 13",
+            "start_date": 1779,
+            "end_date": 1785,
+            "source": "C14",
+            "target": "T94"
+        },
+        {
+            "dates": "1783 IX 3",
+            "start_date": 1783,
+            "end_date": 1785,
+            "source": "C14",
+            "target": "T99"
+        },
+        {
+            "dates": "1732 V 26",
+            "start_date": 1732,
+            "end_date": 1785,
+            "source": "T66",
+            "target": "C15"
+        },
+        {
+            "dates": "1783 IX 3",
+            "start_date": 1783,
+            "end_date": 1785,
+            "source": "C15",
+            "target": "T99"
+        },
+        {
+            "dates": "1747 XI 19",
+            "start_date": 1747,
+            "end_date": 1785,
+            "source": "T78",
+            "target": "C16"
+        },
+        {
+            "dates": "1782 VII 13",
+            "start_date": 1782,
+            "end_date": 1785,
+            "source": "T97",
+            "target": "C17"
+        },
+        {
+            "dates": "1783 IX 3",
+            "start_date": 1783,
+            "end_date": 1785,
+            "source": "T99",
+            "target": "C18"
+        },
+        {
+            "dates": "1689",
+            "start_date": 1689,
+            "end_date": 1785,
+            "source": "T101",
+            "target": "C19"
+        }
+    ]
+}
