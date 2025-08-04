@@ -9,6 +9,7 @@ class ObservableWidget(anywidget.AnyWidget):
     runtime_js = traitlets.Unicode().tag(sync=True)
     notebook_js = traitlets.Unicode().tag(sync=True)
     scrubber_js = traitlets.Unicode().tag(sync=True)
+    dependency_files = traitlets.Dict(default_value={}).tag(sync=True)
     visible_cells = traitlets.List(default_value=[]).tag(sync=True)
     
     def __init__(self, notebook_path="", json_data=None, visible_cells=None, **kwargs):
@@ -22,13 +23,17 @@ class ObservableWidget(anywidget.AnyWidget):
         try:
             base_path = pathlib.Path(notebook_path)
             
-            # Still using hardcoded filenames - no functional change
+            # Load runtime.js (still hardcoded)
             with open(base_path / "runtime.js", 'r') as f:
                 self.runtime_js = f.read()
-            with open(base_path / "845501cdfbbf1a83@464.js", 'r') as f:
+            
+            # Load main notebook file using auto-discovery
+            main_file = self._find_main_notebook_file(base_path)
+            with open(main_file, 'r') as f:
                 self.notebook_js = f.read()
-            with open(base_path / "450051d7f1174df8@254.js", 'r') as f:
-                self.scrubber_js = f.read()
+            
+            # Auto-discover and load dependencies from main file
+            self._load_dependencies(base_path, self.notebook_js)
             
             print(f"ObservableHQ files loaded successfully")
             
@@ -72,6 +77,32 @@ class ObservableWidget(anywidget.AnyWidget):
         
         raise FileNotFoundError(f"Could not parse main file from index.js in {base_path}")
     
+    def _load_dependencies(self, base_path, notebook_content):
+        """Parse and load dependency files from import statements in the main notebook"""
+        # Find import statements like: import define1 from "./450051d7f1174df8@254.js";
+        import_pattern = r'import\s+\w+\s+from\s+[\'"]\.\/([^\'\"]+)[\'"]'
+        matches = re.findall(import_pattern, notebook_content)
+        
+        dependencies = {}
+        
+        # Load each dependency file
+        for dep_filename in matches:
+            dep_file = base_path / dep_filename
+            if dep_file.exists():
+                with open(dep_file, 'r') as f:
+                    dependencies[dep_filename] = f.read()
+            else:
+                print(f"Warning: Dependency file {dep_filename} not found")
+        
+        self.dependency_files = dependencies
+        
+        # For backward compatibility, set scrubber_js to the first dependency
+        if dependencies:
+            first_dep = list(dependencies.values())[0]
+            self.scrubber_js = first_dep
+        else:
+            self.scrubber_js = ""
+    
     _esm = r"""
     function render(view) {
         const model = view.model;
@@ -92,6 +123,7 @@ class ObservableWidget(anywidget.AnyWidget):
             const runtimeCode = model.get("runtime_js");
             let notebookCode = model.get("notebook_js"); 
             const scrubberCode = model.get("scrubber_js");
+            const dependencyFiles = model.get("dependency_files");
             const jsonData = model.get("json_data");
             const visibleCells = model.get("visible_cells");
             
@@ -122,8 +154,8 @@ class ObservableWidget(anywidget.AnyWidget):
                 return originalFileAttachment ? originalFileAttachment(filename) : null;
             };
             
-            // Create module URLs
-            const moduleUrls = createModuleUrls(runtimeCode, notebookCode, scrubberCode);
+            // Create module URLs with all dependencies
+            const moduleUrls = createModuleUrls(runtimeCode, notebookCode, dependencyFiles);
             
             // Load ObservableHQ runtime
             const runtimeModule = await import(moduleUrls.runtime);
@@ -153,23 +185,33 @@ class ObservableWidget(anywidget.AnyWidget):
         }
     }
 
-    function createModuleUrls(runtimeCode, notebookCode, scrubberCode) {
+    function createModuleUrls(runtimeCode, notebookCode, dependencyFiles) {
         const runtimeBlob = new Blob([runtimeCode], {type: 'application/javascript'});
         const runtimeUrl = URL.createObjectURL(runtimeBlob);
         
-        const scrubberBlob = new Blob([scrubberCode], {type: 'application/javascript'});
-        const scrubberUrl = URL.createObjectURL(scrubberBlob);
-        
-        // Update scrubber reference in notebook code
-        const updatedNotebookCode = notebookCode.replace('./450051d7f1174df8@254.js', scrubberUrl);
-        const notebookBlob = new Blob([updatedNotebookCode], {type: 'application/javascript'});
-        const notebookUrl = URL.createObjectURL(notebookBlob);
-        
-        return {
+        const urls = {
             runtime: runtimeUrl,
-            notebook: notebookUrl,
-            scrubber: scrubberUrl
+            dependencies: {}
         };
+        
+        // Create URLs for all dependency files and update references in notebook
+        let updatedNotebookCode = notebookCode;
+        
+        for (const [filename, content] of Object.entries(dependencyFiles)) {
+            const depBlob = new Blob([content], {type: 'application/javascript'});
+            const depUrl = URL.createObjectURL(depBlob);
+            urls.dependencies[filename] = depUrl;
+            
+            // Replace references to this dependency in the notebook code
+            const originalRef = `./${filename}`;
+            updatedNotebookCode = updatedNotebookCode.replace(new RegExp(originalRef.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), depUrl);
+        }
+        
+        // Create notebook URL with updated references
+        const notebookBlob = new Blob([updatedNotebookCode], {type: 'application/javascript'});
+        urls.notebook = URL.createObjectURL(notebookBlob);
+        
+        return urls;
     }
 
     function createSelectiveInspector(container, visibleCells) {
@@ -216,7 +258,7 @@ class ObservableWidget(anywidget.AnyWidget):
         setTimeout(() => {
             if (jsonBlobUrl) URL.revokeObjectURL(jsonBlobUrl);
             URL.revokeObjectURL(moduleUrls.runtime);
-            URL.revokeObjectURL(moduleUrls.scrubber); 
+            Object.values(moduleUrls.dependencies).forEach(url => URL.revokeObjectURL(url));
             URL.revokeObjectURL(moduleUrls.notebook);
             globalThis.FileAttachment = originalFileAttachment;
         }, 15000);
