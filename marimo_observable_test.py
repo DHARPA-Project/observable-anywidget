@@ -3,13 +3,11 @@ import marimo
 __generated_with = "0.14.15"
 app = marimo.App(width="medium")
 
-
 @app.cell
 def _():
     import marimo as mo
     from observable_widget import ObservableWidget
     return ObservableWidget, mo
-
 
 @app.cell
 def _():
@@ -30,7 +28,6 @@ def _():
     }
     return (sample_data,)
 
-
 @app.cell
 def _(ObservableWidget, sample_data):
     widget = ObservableWidget(
@@ -40,28 +37,23 @@ def _(ObservableWidget, sample_data):
     )
     return (widget,)
 
-
 @app.cell
 def _(widget):
     widget
     return
 
-
 @app.cell
 def _():
     return
 
-
 @app.cell
 def _():
     return
-
 
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r""" """)
     return
-
 
 if __name__ == "__main__":
     app.run()
