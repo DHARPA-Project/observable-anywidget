@@ -6,17 +6,20 @@ import re
 class ObservableWidget(anywidget.AnyWidget):
     notebook_path = traitlets.Unicode().tag(sync=True)
     json_data = traitlets.Dict(default_value={}).tag(sync=True)
+    tabular_data = traitlets.Dict(default_value={}).tag(sync=True)
     runtime_js = traitlets.Unicode().tag(sync=True)
     notebook_js = traitlets.Unicode().tag(sync=True)
     scrubber_js = traitlets.Unicode().tag(sync=True)
     dependency_files = traitlets.Dict(default_value={}).tag(sync=True)
     visible_cells = traitlets.List(default_value=[]).tag(sync=True)
     
-    def __init__(self, notebook_path="", json_data=None, visible_cells=None, **kwargs):
+    def __init__(self, notebook_path="", json_data=None, tabular_data=None, visible_cells=None, **kwargs):
         super().__init__(**kwargs)
         self.notebook_path = notebook_path
         if json_data:
             self.json_data = json_data
+        if tabular_data:
+            self.tabular_data = tabular_data
         if visible_cells:
             self.visible_cells = visible_cells
         
@@ -125,9 +128,10 @@ class ObservableWidget(anywidget.AnyWidget):
             const scrubberCode = model.get("scrubber_js");
             const dependencyFiles = model.get("dependency_files");
             const jsonData = model.get("json_data");
+            const tabularData = model.get("tabular_data");
             const visibleCells = model.get("visible_cells");
             
-            // Inject JSON data if provided
+            // Inject JSON data if provided (EXACTLY AS IN WORKING VERSION)
             let jsonBlobUrl;
             if (jsonData && Object.keys(jsonData).length > 0) {
                 const jsonFilename = Object.keys(jsonData)[0];
@@ -141,7 +145,36 @@ class ObservableWidget(anywidget.AnyWidget):
                 notebookCode = notebookCode.replace(filePattern, jsonBlobUrl);
             }
             
-            // Override FileAttachment for data injection
+            let csvBlobUrl;
+            if (tabularData && Object.keys(tabularData).length > 0) {
+                const csvFilename = Object.keys(tabularData)[0];
+                const csvData = tabularData[csvFilename];
+                
+                // Convert array of objects to CSV text
+                let csvContent = "";
+                if (Array.isArray(csvData) && csvData.length > 0) {
+                    // Get headers
+                    const headers = Object.keys(csvData[0]);
+                    csvContent = headers.join(',') + '\n';
+                    
+                    // Add rows
+                    csvData.forEach(row => {
+                        const values = headers.map(h => {
+                            const val = row[h];
+                            if (typeof val === 'string' && (val.includes(',') || val.includes('"'))) {
+                                return '"' + val.replace(/"/g, '""') + '"';
+                            }
+                            return val;
+                        });
+                        csvContent += values.join(',') + '\n';
+                    });
+                }
+                
+                const csvBlob = new Blob([csvContent], {type: 'text/csv'});
+                csvBlobUrl = URL.createObjectURL(csvBlob);
+            }
+            
+            // Override FileAttachment for data injection (EXACTLY AS IN WORKING VERSION)
             const originalFileAttachment = globalThis.FileAttachment;
             globalThis.FileAttachment = function(filename) {
                 if (jsonData && jsonData[filename]) {
@@ -151,11 +184,21 @@ class ObservableWidget(anywidget.AnyWidget):
                         mimeType: "application/json"
                     };
                 }
+                // Add CSV support to FileAttachment
+                if (tabularData && tabularData[filename]) {
+                    const data = tabularData[filename];
+                    return {
+                        csv: () => Promise.resolve(data),
+                        json: () => Promise.resolve(data),
+                        name: filename,
+                        mimeType: "text/csv"
+                    };
+                }
                 return originalFileAttachment ? originalFileAttachment(filename) : null;
             };
             
             // Create module URLs with all dependencies
-            const moduleUrls = createModuleUrls(runtimeCode, notebookCode, dependencyFiles);
+            const moduleUrls = createModuleUrls(runtimeCode, notebookCode, dependencyFiles, csvBlobUrl);
             
             // Load ObservableHQ runtime
             const runtimeModule = await import(moduleUrls.runtime);
@@ -167,14 +210,14 @@ class ObservableWidget(anywidget.AnyWidget):
             container.innerHTML = "";
             
             // Create inspector with cell visibility control
-            const inspector = createSelectiveInspector(container, visibleCells);
+            const inspector = createSelectiveInspector(container, visibleCells, Inspector);
             
             const main = runtime.module(notebookModule.default, inspector);
             
             console.log("ObservableHQ notebook loaded successfully");
             
             // Cleanup URLs after delay
-            scheduleCleanup(moduleUrls, jsonBlobUrl, originalFileAttachment);
+            scheduleCleanup(moduleUrls, jsonBlobUrl, csvBlobUrl, originalFileAttachment);
             
         } catch (error) {
             console.error("Error loading ObservableHQ notebook:", error);
@@ -185,7 +228,7 @@ class ObservableWidget(anywidget.AnyWidget):
         }
     }
 
-    function createModuleUrls(runtimeCode, notebookCode, dependencyFiles) {
+    function createModuleUrls(runtimeCode, notebookCode, dependencyFiles, csvBlobUrl) {
         const runtimeBlob = new Blob([runtimeCode], {type: 'application/javascript'});
         const runtimeUrl = URL.createObjectURL(runtimeBlob);
         
@@ -198,7 +241,15 @@ class ObservableWidget(anywidget.AnyWidget):
         let updatedNotebookCode = notebookCode;
         
         for (const [filename, content] of Object.entries(dependencyFiles)) {
-            const depBlob = new Blob([content], {type: 'application/javascript'});
+            let depContent = content;
+            
+            // MINIMAL: Only replace CSV patterns in dependencies if we have CSV data
+            if (csvBlobUrl) {
+                const csvPattern = /\.\/files\/[a-f0-9]+\.csv/g;
+                depContent = depContent.replace(csvPattern, csvBlobUrl);
+            }
+            
+            const depBlob = new Blob([depContent], {type: 'application/javascript'});
             const depUrl = URL.createObjectURL(depBlob);
             urls.dependencies[filename] = depUrl;
             
@@ -214,7 +265,7 @@ class ObservableWidget(anywidget.AnyWidget):
         return urls;
     }
 
-    function createSelectiveInspector(container, visibleCells) {
+    function createSelectiveInspector(container, visibleCells, Inspector) {
         return function(name) {
             // Hide cells not in visible list
             if (visibleCells.length > 0 && !visibleCells.includes(name)) {
@@ -254,9 +305,10 @@ class ObservableWidget(anywidget.AnyWidget):
         };
     }
 
-    function scheduleCleanup(moduleUrls, jsonBlobUrl, originalFileAttachment) {
+    function scheduleCleanup(moduleUrls, jsonBlobUrl, csvBlobUrl, originalFileAttachment) {
         setTimeout(() => {
             if (jsonBlobUrl) URL.revokeObjectURL(jsonBlobUrl);
+            if (csvBlobUrl) URL.revokeObjectURL(csvBlobUrl);
             URL.revokeObjectURL(moduleUrls.runtime);
             Object.values(moduleUrls.dependencies).forEach(url => URL.revokeObjectURL(url));
             URL.revokeObjectURL(moduleUrls.notebook);
