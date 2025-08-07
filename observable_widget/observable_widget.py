@@ -26,7 +26,7 @@ class ObservableWidget(anywidget.AnyWidget):
         try:
             base_path = pathlib.Path(notebook_path)
             
-            # Load runtime.js (still hardcoded)
+            # Load runtime.js
             with open(base_path / "runtime.js", 'r') as f:
                 self.runtime_js = f.read()
             
@@ -131,7 +131,7 @@ class ObservableWidget(anywidget.AnyWidget):
             const tabularData = model.get("tabular_data");
             const visibleCells = model.get("visible_cells");
             
-            // Inject JSON data if provided (EXACTLY AS IN WORKING VERSION)
+            // Inject JSON data if provided 
             let jsonBlobUrl;
             if (jsonData && Object.keys(jsonData).length > 0) {
                 const jsonFilename = Object.keys(jsonData)[0];
@@ -145,6 +145,7 @@ class ObservableWidget(anywidget.AnyWidget):
                 notebookCode = notebookCode.replace(filePattern, jsonBlobUrl);
             }
             
+            // process dependencies for CSV
             let csvBlobUrl;
             if (tabularData && Object.keys(tabularData).length > 0) {
                 const csvFilename = Object.keys(tabularData)[0];
@@ -174,19 +175,32 @@ class ObservableWidget(anywidget.AnyWidget):
                 csvBlobUrl = URL.createObjectURL(csvBlob);
             }
             
-            // Override FileAttachment for data injection (EXACTLY AS IN WORKING VERSION)
-            const originalFileAttachment = globalThis.FileAttachment;
+
+            // Store all widget data globally to share between instances
+            if (!globalThis._widgetData) {
+                globalThis._widgetData = { json: {}, tabular: {} };
+            }
+            
+            // Add this widget's data to the global store
+            Object.assign(globalThis._widgetData.json, jsonData || {});
+            Object.assign(globalThis._widgetData.tabular, tabularData || {});
+            
+            // Store original only if not already stored
+            if (!globalThis._originalFileAttachment) {
+                globalThis._originalFileAttachment = globalThis.FileAttachment;
+            }
+            
             globalThis.FileAttachment = function(filename) {
-                if (jsonData && jsonData[filename]) {
+                // Check all widget data
+                if (globalThis._widgetData.json[filename]) {
                     return {
-                        json: () => Promise.resolve(jsonData[filename]),
+                        json: () => Promise.resolve(globalThis._widgetData.json[filename]),
                         name: filename,
                         mimeType: "application/json"
                     };
                 }
-                // Add CSV support to FileAttachment
-                if (tabularData && tabularData[filename]) {
-                    const data = tabularData[filename];
+                if (globalThis._widgetData.tabular[filename]) {
+                    const data = globalThis._widgetData.tabular[filename];
                     return {
                         csv: () => Promise.resolve(data),
                         json: () => Promise.resolve(data),
@@ -194,7 +208,7 @@ class ObservableWidget(anywidget.AnyWidget):
                         mimeType: "text/csv"
                     };
                 }
-                return originalFileAttachment ? originalFileAttachment(filename) : null;
+                return globalThis._originalFileAttachment ? globalThis._originalFileAttachment(filename) : null;
             };
             
             // Create module URLs with all dependencies
@@ -216,8 +230,8 @@ class ObservableWidget(anywidget.AnyWidget):
             
             console.log("ObservableHQ notebook loaded successfully");
             
-            // Cleanup URLs after delay
-            scheduleCleanup(moduleUrls, jsonBlobUrl, csvBlobUrl, originalFileAttachment);
+            // Cleanup URLs after delay 
+            scheduleCleanup(moduleUrls, jsonBlobUrl, csvBlobUrl);
             
         } catch (error) {
             console.error("Error loading ObservableHQ notebook:", error);
@@ -305,14 +319,14 @@ class ObservableWidget(anywidget.AnyWidget):
         };
     }
 
-    function scheduleCleanup(moduleUrls, jsonBlobUrl, csvBlobUrl, originalFileAttachment) {
+    function scheduleCleanup(moduleUrls, jsonBlobUrl, csvBlobUrl) {
         setTimeout(() => {
             if (jsonBlobUrl) URL.revokeObjectURL(jsonBlobUrl);
             if (csvBlobUrl) URL.revokeObjectURL(csvBlobUrl);
             URL.revokeObjectURL(moduleUrls.runtime);
             Object.values(moduleUrls.dependencies).forEach(url => URL.revokeObjectURL(url));
             URL.revokeObjectURL(moduleUrls.notebook);
-            globalThis.FileAttachment = originalFileAttachment;
+            // DON'T restore FileAttachment - let it persist for other widgets
         }, 15000);
     }
 
