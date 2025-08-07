@@ -1,0 +1,14 @@
+{
+  "name": "@jmiguelv/radical-translations-agents-network-visualisation",
+  "main": "cd5a27de2cf65772@2670.js",
+  "version": "2670.0.0",
+  "homepage": "https://observablehq.com/@jmiguelv/radical-translations-agents-network-visualisation",
+  "author": {
+    "name": "Miguel Vieira",
+    "url": "https://observablehq.com/@jmiguelv"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
