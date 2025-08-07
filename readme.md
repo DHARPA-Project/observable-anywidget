@@ -1,6 +1,6 @@
-# ObservableHQ Marimo Integration
+# ObservableHQ Marimo Integration Experiment
 
-This project enables integration of ObservableHQ exported code into Marimo projects to embed interactive ObservableHQ visualizations in your Marimo notebooks.
+This experiment tests the integration of ObservableHQ exported code into Marimo projects to embed interactive ObservableHQ visualizations in your Marimo notebooks.
 
 ## Overview
 
@@ -10,14 +10,13 @@ The ObservableWidget loads ObservableHQ project files to embed visualizations in
 
 ```
 your-project/
-├── marimo_test.py                  # Marimo notebook
+├── example1.py                  # Marimo notebook
+├── example2.py                  # Marimo notebook
 ├── observable_widget/              # Widget code
-│   ├── __init__.py
 │   └── observable_widget.py
 └── dynamic-network-graph/          # ObservableHQ project exported code
-    ├── index.js
-    ├── runtime.js
-    └── [other generated files]
+└── radical-translations-agents-network-visualisation/          # ObservableHQ project exported code
+
 ```
 
 ## Widget Parameters
@@ -27,8 +26,8 @@ your-project/
 ```python
 widget = ObservableWidget(
     notebook_path="path-to-observable-project",
-    json_data={"filename.json": your_data},
-    visible_cells=["cell1", "cell2"]
+    json_data={"filename.json": your_data}, # variable containing data to inject to the visualization
+    visible_cells=["cell1", "cell2"] # cells of the Observable notebook that need displaying
 )
 ```
 
@@ -73,6 +72,7 @@ widget = ObservableWidget(
 )
 
 # Display in Marimo
+
 widget
 ```
 
@@ -83,21 +83,25 @@ widget
 3. Use the directory name as the `notebook_path` parameter
 4. Map your data to the expected filenames using `json_data`
 
-## Current Example
+## Example 1
 
-This project includes a dynamic network graph visualization created by Dr. Lena Jaskov:
-https://observablehq.com/@yaslena/dynamic-network-graph
+This example includes a visualization created by Dr. Lena Jaskov: https://observablehq.com/@yaslena/dynamic-network-graph. The experiment uses fake data in the Marimo notebook to test the possibility to reuse the visualization with another dataset.
 
-## Requirements
-
-- Python 3.8+
-- Marimo
-- anywidget
-- pathlib
-- re
 
 ## Installation
 
 1. Clone this repository
-2. Install dependencies: `pip install marimo anywidget`
-3. Run the example: `marimo run marimo_test.py`
+2. Install dependencies in your python environment: `pip install marimo anywidget`
+3. Run the example: `marimo run example1.py`
+
+## Example 2
+
+This example includes a visualization created by Miguel Vieira:
+https://observablehq.com/@jmiguelv/radical-translations-agents-network-visualisation
+
+
+## Installation
+
+1. Clone this repository
+2. Install dependencies in your python environment: `pip install marimo anywidget`
+3. Run the example: `marimo run example2.py`
