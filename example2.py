@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.14.15"
+__generated_with = "0.15.2"
 app = marimo.App(width="medium")
 
 
@@ -124,77 +124,64 @@ def _():
 
 @app.cell
 def _():
-    # Multi-type network data with people and places
+    # Multi-type network data with corrected format for Observable notebook
     sample_network_data = {
         "nodes": [
-            # People nodes
-            {"id": "alice", "title": "Alice Chen", "group": "person", "start_date": 1980, "end_date": 2024},
-            {"id": "bob", "title": "Bob Smith", "group": "person", "start_date": 1975, "end_date": 2024},
-            {"id": "carol", "title": "Carol Jones", "group": "person", "start_date": 1982, "end_date": 2024},
-            {"id": "david", "title": "David Lee", "group": "person", "start_date": 1978, "end_date": 2024},
-            {"id": "eve", "title": "Eve Wilson", "group": "person", "start_date": 1985, "end_date": 2024},
-            {"id": "frank", "title": "Frank Brown", "group": "person", "start_date": 1990, "end_date": 2024},
-            
+            # People nodes with gender indicators
+            {"id": "alice", "title": "Alice Chen", "group": "person (f)", "start_date": 1980, "end_date": 2024},
+            {"id": "bob", "title": "Bob Smith", "group": "person (m)", "start_date": 1975, "end_date": 2024},
+            {"id": "carol", "title": "Carol Jones", "group": "person (f)", "start_date": 1982, "end_date": 2024},
+            {"id": "david", "title": "David Lee", "group": "person (m)", "start_date": 1978, "end_date": 2024},
+            {"id": "eve", "title": "Eve Wilson", "group": "person (f)", "start_date": 1985, "end_date": 2024},
+            {"id": "frank", "title": "Frank Brown", "group": "person (m)", "start_date": 1990, "end_date": 2024},
+
             # Place nodes
             {"id": "nyc", "title": "New York City", "group": "place", "start_date": 1624, "end_date": 2024},
             {"id": "boston", "title": "Boston", "group": "place", "start_date": 1630, "end_date": 2024},
             {"id": "sf", "title": "San Francisco", "group": "place", "start_date": 1776, "end_date": 2024},
-            {"id": "mit", "title": "MIT", "group": "institution", "start_date": 1861, "end_date": 2024},
-            {"id": "stanford", "title": "Stanford University", "group": "institution", "start_date": 1885, "end_date": 2024},
-            {"id": "google", "title": "Google HQ", "group": "company", "start_date": 1998, "end_date": 2024}
+
+            # Organisation nodes
+            {"id": "mit", "title": "MIT", "group": "organisation", "start_date": 1861, "end_date": 2024},
+            {"id": "stanford", "title": "Stanford University", "group": "organisation", "start_date": 1885, "end_date": 2024},
+            {"id": "google", "title": "Google", "group": "organisation", "start_date": 1998, "end_date": 2024}
         ],
         "edges": [
-            # knows (person-person)
-            {"source": "alice", "target": "bob", "type": "knows", "strength": 1.0, "start_date": 2005, "end_date": 2024},
-            {"source": "alice", "target": "carol", "type": "knows", "strength": 1.0, "start_date": 2008, "end_date": 2024},
-            {"source": "bob", "target": "david", "type": "knows", "strength": 1.0, "start_date": 2000, "end_date": 2024},
-            {"source": "carol", "target": "eve", "type": "knows", "strength": 1.0, "start_date": 2010, "end_date": 2024},
-            {"source": "david", "target": "frank", "type": "knows", "strength": 0.8, "start_date": 2015, "end_date": 2024},
-            
-            # collaborates_with (person-person)
-            {"source": "alice", "target": "bob", "type": "collaborates", "strength": 1.0, "start_date": 2010, "end_date": 2018},
-            {"source": "carol", "target": "eve", "type": "collaborates", "strength": 1.0, "start_date": 2015, "end_date": 2024},
-            {"source": "david", "target": "bob", "type": "collaborates", "strength": 0.9, "start_date": 2012, "end_date": 2020},
-            
-            # co_publishes_with (person-person)
-            {"source": "alice", "target": "carol", "type": "publishes", "strength": 0.8, "start_date": 2012, "end_date": 2016},
-            {"source": "bob", "target": "david", "type": "publishes", "strength": 0.9, "start_date": 2014, "end_date": 2019},
-            {"source": "eve", "target": "frank", "type": "publishes", "strength": 0.7, "start_date": 2018, "end_date": 2024},
-            
-            # lives_in (person-place)
-            {"source": "alice", "target": "nyc", "type": "lives_in", "strength": 0.9, "start_date": 2005, "end_date": 2015},
-            {"source": "alice", "target": "sf", "type": "lives_in", "strength": 1.0, "start_date": 2015, "end_date": 2024},
-            {"source": "bob", "target": "boston", "type": "lives_in", "strength": 0.8, "start_date": 1975, "end_date": 2010},
-            {"source": "bob", "target": "nyc", "type": "lives_in", "strength": 1.0, "start_date": 2010, "end_date": 2024},
-            {"source": "carol", "target": "sf", "type": "lives_in", "strength": 1.0, "start_date": 2008, "end_date": 2024},
-            {"source": "david", "target": "boston", "type": "lives_in", "strength": 1.0, "start_date": 2000, "end_date": 2024},
-            {"source": "eve", "target": "sf", "type": "lives_in", "strength": 1.0, "start_date": 2010, "end_date": 2024},
-            {"source": "frank", "target": "nyc", "type": "lives_in", "strength": 0.9, "start_date": 2015, "end_date": 2024},
-            
-            # works_at (person-place)
-            {"source": "alice", "target": "mit", "type": "works_at", "strength": 1.0, "start_date": 2005, "end_date": 2015},
-            {"source": "alice", "target": "google", "type": "works_at", "strength": 1.0, "start_date": 2015, "end_date": 2024},
-            {"source": "bob", "target": "mit", "type": "works_at", "strength": 1.0, "start_date": 2000, "end_date": 2024},
-            {"source": "carol", "target": "stanford", "type": "works_at", "strength": 0.9, "start_date": 2008, "end_date": 2018},
-            {"source": "carol", "target": "google", "type": "works_at", "strength": 1.0, "start_date": 2018, "end_date": 2024},
-            {"source": "david", "target": "mit", "type": "works_at", "strength": 1.0, "start_date": 2005, "end_date": 2024},
-            {"source": "eve", "target": "stanford", "type": "works_at", "strength": 1.0, "start_date": 2010, "end_date": 2024},
-            {"source": "frank", "target": "google", "type": "works_at", "strength": 0.8, "start_date": 2015, "end_date": 2024}
+            # knows relationships (person-person)
+            {"source": "alice", "target": "bob", "label": "knows", "meta": []},
+            {"source": "alice", "target": "carol", "label": "knows", "meta": []},
+            {"source": "bob", "target": "david", "label": "knows", "meta": []},
+            {"source": "carol", "target": "eve", "label": "knows", "meta": []},
+            {"source": "david", "target": "frank", "label": "knows", "meta": []},
+            {"source": "bob", "target": "carol", "label": "knows", "meta": []},
+            {"source": "eve", "target": "frank", "label": "knows", "meta": []},
+
+            # member of relationships (person-organisation)
+            {"source": "alice", "target": "mit", "label": "member of", "meta": []},
+            {"source": "alice", "target": "google", "label": "member of", "meta": []},
+            {"source": "bob", "target": "mit", "label": "member of", "meta": []},
+            {"source": "carol", "target": "stanford", "label": "member of", "meta": []},
+            {"source": "carol", "target": "google", "label": "member of", "meta": []},
+            {"source": "david", "target": "mit", "label": "member of", "meta": []},
+            {"source": "eve", "target": "stanford", "label": "member of", "meta": []},
+            {"source": "frank", "target": "google", "label": "member of", "meta": []},
+
+            # based in relationships (person-place)
+            {"source": "alice", "target": "nyc", "label": "based in", "meta": []},
+            {"source": "alice", "target": "sf", "label": "based in", "meta": []},
+            {"source": "bob", "target": "boston", "label": "based in", "meta": []},
+            {"source": "bob", "target": "nyc", "label": "based in", "meta": []},
+            {"source": "carol", "target": "sf", "label": "based in", "meta": []},
+            {"source": "david", "target": "boston", "label": "based in", "meta": []},
+            {"source": "eve", "target": "sf", "label": "based in", "meta": []},
+            {"source": "frank", "target": "nyc", "label": "based in", "meta": []},
+
+            # published in relationships (organisation-place)
+            {"source": "mit", "target": "boston", "label": "published in", "meta": []},
+            {"source": "stanford", "target": "sf", "label": "published in", "meta": []},
+            {"source": "google", "target": "sf", "label": "published in", "meta": []}
         ]
     }
     return (sample_network_data,)
-
-
-@app.cell
-def _(ObservableWidget, sample_network_data, sample_people_data):
-    # Create widget with people-places network visualization
-    network_widget = ObservableWidget(
-        notebook_path="radical-translations-agents-network-visualisation",
-        json_data={"network@26.json": sample_network_data}, # json data variable to replace
-        tabular_data={"athletes.csv": sample_people_data}, #tabular data to replace
-        visible_cells=["display","chart"]  # cells to display
-    )
-    return (network_widget,)
 
 
 @app.cell
@@ -202,26 +189,48 @@ def _(mo):
     mo.md(
         r"""
     ## Multi-Type Network Visualization
-    
+
     This visualization shows:
-    - **Node Types**: People (researchers/engineers), Places (cities), Institutions (universities), and Companies
+    - **Node Types**: 
+      - People (with gender indicators: f/m)
+      - Places (cities)
+      - Organisations (universities and companies)
     - **Edge Types**: 
       - `knows` - social connections between people
-      - `collaborates` - professional collaborations
-      - `publishes` - co-authorship relationships
-      - `lives_in` - residence relationships
-      - `works_at` - employment relationships
-        
-    Note: Set minimum connections to 1 to see all nodes, as this is a small sample dataset.
+      - `member of` - affiliation with organisations
+      - `based in` - location relationships
+      - `published in` - organisation to place relationships
+
+    The visualization is configured with custom defaults via config_overrides.
     """
     )
     return
 
 
 @app.cell
-def _(network_widget):
-    # Display the network visualization
-    network_widget
+def _(ObservableWidget, sample_network_data, sample_people_data):
+    # Create and display widget with matching relationships
+    network_widget = ObservableWidget(
+        notebook_path="radical-translations-agents-network-visualisation",
+        json_data={"network@26.json": sample_network_data},
+        tabular_data={"athletes.csv": sample_people_data},
+        visible_cells=["chart"],  # Show both filters and chart
+        config_overrides={
+            "numberOfConnections": 1,  # Set to 1 for small dataset
+            #"relationships": ["knows", "member of", "based in"], 
+            "relationships": ["knows", "member of"],
+            "linkDistance": 30,
+            "strokeWidth": 1.5,
+            "zoomLevel": 1,
+            "showData": False
+        }
+    )
+    network_widget  # Display the widget
+    return
+
+
+@app.cell
+def _():
     return
 
 

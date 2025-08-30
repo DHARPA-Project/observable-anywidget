@@ -12,8 +12,9 @@ class ObservableWidget(anywidget.AnyWidget):
     scrubber_js = traitlets.Unicode().tag(sync=True)
     dependency_files = traitlets.Dict(default_value={}).tag(sync=True)
     visible_cells = traitlets.List(default_value=[]).tag(sync=True)
+    config_overrides = traitlets.Dict(default_value={}).tag(sync=True)
     
-    def __init__(self, notebook_path="", json_data=None, tabular_data=None, visible_cells=None, **kwargs):
+    def __init__(self, notebook_path="", json_data=None, tabular_data=None, visible_cells=None, config_overrides=None, **kwargs):
         super().__init__(**kwargs)
         self.notebook_path = notebook_path
         if json_data:
@@ -22,6 +23,8 @@ class ObservableWidget(anywidget.AnyWidget):
             self.tabular_data = tabular_data
         if visible_cells:
             self.visible_cells = visible_cells
+        if config_overrides:
+            self.config_overrides = config_overrides
         
         try:
             base_path = pathlib.Path(notebook_path)
@@ -130,6 +133,7 @@ class ObservableWidget(anywidget.AnyWidget):
             const jsonData = model.get("json_data");
             const tabularData = model.get("tabular_data");
             const visibleCells = model.get("visible_cells");
+            const configOverrides = model.get("config_overrides");
             
             // Inject JSON data if provided 
             let jsonBlobUrl;
@@ -227,6 +231,50 @@ class ObservableWidget(anywidget.AnyWidget):
             const inspector = createSelectiveInspector(container, visibleCells, Inspector);
             
             const main = runtime.module(notebookModule.default, inspector);
+            
+            // Apply configuration overrides using redefine
+            if (configOverrides && Object.keys(configOverrides).length > 0) {
+                // Override config if connections is specified
+                if (configOverrides.connections !== undefined) {
+                    main.redefine("config", {
+                        title: "Agents",
+                        relationships: ["knows"],
+                        connections: configOverrides.connections
+                    });
+                }
+                
+                // Override numberOfConnections directly if specified
+                if (configOverrides.numberOfConnections !== undefined) {
+                    main.redefine("numberOfConnections", configOverrides.numberOfConnections);
+                }
+                
+                // Override other display variables
+                if (configOverrides.linkDistance !== undefined) {
+                    main.redefine("linkDistance", configOverrides.linkDistance);
+                }
+                
+                if (configOverrides.strokeWidth !== undefined) {
+                    main.redefine("strokeWidth", configOverrides.strokeWidth);
+                }
+                
+                if (configOverrides.zoomLevel !== undefined) {
+                    main.redefine("zoomLevel", configOverrides.zoomLevel);
+                }
+                
+                if (configOverrides.showData !== undefined) {
+                    main.redefine("showData", configOverrides.showData);
+                }
+                
+                // Override relationships if specified
+                if (configOverrides.relationships !== undefined) {
+                    main.redefine("relationships", configOverrides.relationships);
+                }
+                
+                // Override translatedTo if specified
+                if (configOverrides.translatedTo !== undefined) {
+                    main.redefine("translatedTo", configOverrides.translatedTo);
+                }
+            }
             
             console.log("ObservableHQ notebook loaded successfully");
             
