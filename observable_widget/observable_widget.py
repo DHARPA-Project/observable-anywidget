@@ -114,8 +114,38 @@ class ObservableWidget(anywidget.AnyWidget):
         const model = view.model;
         const el = view.el;
         
+        // Add tooltip CSS styles
+        const style = document.createElement('style');
+        style.textContent = `
+            .tooltip {
+                background: rgba(6, 6, 6, .85);
+                border-radius: .4rem;
+                color: #fff;
+                display: block;
+                font-family: sans-serif;
+                font-size: .8rem;
+                max-width: 400px;
+                padding: .6rem;
+                position: absolute;
+                text-overflow: ellipsis;
+                z-index: 9999;
+                pointer-events: none;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+                line-height: 1.4;
+            }
+            
+            .has-link {
+                cursor: pointer;
+            }
+            
+            .no-link {
+                cursor: default;
+            }
+        `;
+        document.head.appendChild(style);
+        
         const container = document.createElement("div");
-        container.style.cssText = "width: 100%; min-height: 500px; padding: 20px; border: 1px solid #ccc;";
+        container.style.cssText = "width: 100%; min-height: 500px; padding: 20px; border: 1px solid #ccc; position: relative;";
         container.innerHTML = "<h3>Loading ObservableHQ Notebook...</h3>";
         el.appendChild(container);
         
