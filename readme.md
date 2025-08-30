@@ -59,7 +59,7 @@ sample_data = {
         {"id": "A", "start_date": 1450, "end_date": 1784},
         {"id": "B", "start_date": 1460, "end_date": 1784}
     ],
-    "links": [
+    "edges": [
         {"source": "A", "target": "B", "start_date": 1460, "end_date": 1784}
     ]
 }
@@ -92,7 +92,8 @@ This example includes a visualization created by Dr. Lena Jaskov: https://observ
 
 1. Clone this repository
 2. Install dependencies in your python environment: `pip install marimo anywidget`
-3. Run the example: `marimo run example1.py`
+3. Run the example: `marimo run example1.py` to open the notebook in "app mode" (without code) or 
+`marimo edit example1.py` to show tge editor with UI controls
 
 ## Example 2
 
@@ -104,4 +105,5 @@ https://observablehq.com/@jmiguelv/radical-translations-agents-network-visualisa
 
 1. Clone this repository
 2. Install dependencies in your python environment: `pip install marimo anywidget`
-3. Run the example: `marimo run example2.py`
+3. Run the example: `marimo run example2.py` to open the notebook in "app mode" (without code) or 
+`marimo edit example2.py` to show tge editor with UI controls
